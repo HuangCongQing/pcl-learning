@@ -2,3 +2,22 @@
 # 忽略所有 .a 结尾的文件
 
 *.opendb
+
+
+# 此为注释 ,将被 Git 忽略
+# 忽略所有 .a 结尾的文件
+*.a
+# 但 lib.a 除外
+# !lib.a
+# 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+# /TODO
+# 忽略 build/ 目录下的所有文件
+# build/
+# 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+# doc/*.txt
+
+# 会忽略掉 doc/ 里面所有的txt文件，包括子目录下的（**/ 从 Git 1.8.2 之后开始支持 **/ 匹配模式，表示递归匹配子目录下的文件）
+# doc/**/*.txt
+# local.properties #过滤具体文件
+# ！local.properties#添加具体文件
+# *.[oa]#忽略所有以 .o 或 .a 结尾的文件
