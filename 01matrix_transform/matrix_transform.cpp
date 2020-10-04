@@ -19,7 +19,7 @@ void showHelp(char *program_name)
 int main(int argc, char **argv)
 {
 
-    // Show help
+    // Show help 展示帮助信息
     if (pcl::console::find_switch(argc, argv, "-h") || pcl::console::find_switch(argc, argv, "--help"))
     {
         showHelp(argv[0]);
@@ -47,7 +47,7 @@ int main(int argc, char **argv)
         }
     }
 
-    // Load file | Works with PCD and PLY files
+    // Load file | Works with PCD and PLY files 在参数中寻找pcd或者ply文件
     pcl::PointCloud<pcl::PointXYZ>::Ptr source_cloud(new pcl::PointCloud<pcl::PointXYZ>());
 
     if (file_is_pcd)
@@ -79,9 +79,10 @@ int main(int argc, char **argv)
     | 0 0 1 z |  /
     | 0 0 0 1 |    -> We do not use this line (and it has to stay 0,0,0,1)
 
-    METHOD #1: Using a Matrix4f
+    METHOD #1: Using a Matrix4f ====================================第二种方法
     This is the "manual" method, perfect to understand but error prone !
   */
+    // 创建4x4单位阵
     Eigen::Matrix4f transform_1 = Eigen::Matrix4f::Identity();
 
     // Define a rotation matrix (see https://en.wikipedia.org/wiki/Rotation_matrix)
@@ -99,7 +100,7 @@ int main(int argc, char **argv)
     printf("Method #1: using a Matrix4f\n");
     std::cout << transform_1 << std::endl;
 
-    /*  METHOD #2: Using a Affine3f
+    /*  METHOD #2: Using a Affine3f ====================================第二种方法
     This method is easier and less error prone
   */
     Eigen::Affine3f transform_2 = Eigen::Affine3f::Identity();
@@ -119,7 +120,7 @@ int main(int argc, char **argv)
     // You can either apply transform_1 or transform_2; they are the same
     pcl::transformPointCloud(*source_cloud, *transformed_cloud, transform_2);
 
-    // Visualization
+    // Visualization  可视化
     printf("\nPoint cloud colors :  white  = original point cloud\n"
            "                        red  = transformed point cloud\n");
     pcl::visualization::PCLVisualizer viewer("Matrix transformation example");
