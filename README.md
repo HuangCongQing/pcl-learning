@@ -3,6 +3,7 @@ PCL（Point Cloud Library）点云库
 
 开发环境：Ubuntu18.04
 
+个人笔记：https://www.yuque.com/huangzhongqing/muam1n
 
 ### 文章
 
