@@ -42,18 +42,18 @@ range-images
 tracking
 
 ### step3
- io 输入输出
-filters 滤波
-features 特征
+1 io 输入输出
+2 filters 滤波
+3 features 特征
 
 
 ### step4
-surface 表面 
-segmentation 分割
-recognition 识别
-registration 配准
- visualization 可视化
- keypoints 关键点
+1 surface表面 
+2 segmentation分割
+3 recognition识别
+4 registration配准
+5 visualization可视化
+6 keypoints关键点
 
 ## 文章
 
