@@ -18,7 +18,7 @@ https://pointclouds.org/
 * 个人笔记：https://www.yuque.com/huangzhongqing/muam1n
 
 
-### 编译过程
+## 编译过程
 ```shell
 mkdir build
 cd build
@@ -27,12 +27,39 @@ make  // 生成可执行文件命令
 ./pcd_write  // 运行  生成pcd文件并打印5个点的值
 ```
 
+## 目录contents
+a graph of code libraries
+### step1
+common
 
-### 文章
+### step2
+kdtree k维tree
+octree 八叉树
+search
+
+sample consensus  抽样一致性模块
+range-images
+tracking
+
+### step3
+ io 输入输出
+filters 滤波
+features 特征
+
+
+### step4
+surface 表面 
+segmentation 分割
+recognition 识别
+registration 配准
+ visualization 可视化
+ keypoints 关键点
+
+## 文章
 
 * [3D-BoNet：比3D点云实例分割算法快10倍！代码已开源](https://mp.weixin.qq.com/s/VA593ECOsp0UDc82i8uedQ)
 
-### 相关链接
+## 相关链接
 
 * https://github.com/Yochengliu/awesome-point-cloud-analysis
 * https://github.com/QingyongHu/SoTA-Point-Cloud
