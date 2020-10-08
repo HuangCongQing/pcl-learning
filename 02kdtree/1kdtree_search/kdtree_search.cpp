@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-08 21:46:40
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-08 21:47:11
+ * @LastEditTime: 2020-10-08 22:03:47
  */
 #include <pcl/point_cloud.h>        //点类型定义头文件
 #include <pcl/kdtree/kdtree_flann.h> //kdtree类定义头文件
@@ -91,3 +91,16 @@ main (int argc, char** argv)
 
   return 0;
 }
+
+// K nearest neighbor search at (496.165 566.915 291.089) with K=10
+//     489.233 546.223 309.002 (squared distance: 797.095)
+//     520.672 589.71 262.249 (squared distance: 1951.96)
+//     463.981 513.441 291.076 (squared distance: 3895.31)
+//     570.873 524.83 291.856 (squared distance: 7352.9)
+//     446.205 583.773 359.421 (squared distance: 7449.44)
+//     563.249 506.541 261.833 (squared distance: 9001.09)
+//     419.788 605.717 346.714 (squared distance: 10433.2)
+//     491.057 669.789 306.901 (squared distance: 10859.2)
+//     388.539 556.211 300.09 (squared distance: 11779.1)
+//     518.13 555.791 397.364 (squared distance: 11900.5)
+// Neighbors within radius search at (496.165 566.915 291.089) with radius=6.36844
