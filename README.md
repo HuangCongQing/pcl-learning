@@ -7,11 +7,11 @@ PCL（Point Cloud Library）点云库  个人开发环境：Ubuntu18.04
 >* 支持多种操作系统平台，可在Windows、Linux、Android、Mac OS X、部分嵌入式实时系统上运行。如果说OpenCV是2D信息获取与处理的技术结晶，那么PCL在3D信息获取与处理上，就与OpenCV具有同等地位
 >*  PCL是BSD授权方式，可以免费进行商业和学术应用。
 
-英文官网：https://pcl.readthedocs.io/projects/tutorials/en/latest/#
+* 英文官网：https://pcl.readthedocs.io/projects/tutorials/en/latest/#
 https://pointclouds.org/
-中文论坛：http://www.pclcn.org/
-GitHub：https://github.com/PointCloudLibrary/pcl
-学习基于pcl1.9.1：https://github.com/PointCloudLibrary/pcl/tree/pcl-1.9.1
+* 中文论坛：http://www.pclcn.org/
+* GitHub：https://github.com/PointCloudLibrary/pcl
+    * 学习基于pcl1.9.1：https://github.com/PointCloudLibrary/pcl/tree/pcl-1.9.1
 
 
 
