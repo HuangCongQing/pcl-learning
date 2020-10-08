@@ -34,7 +34,7 @@ a graph of code libraries
 * [common](01common )
 
 ### step2
-* [kdtree k维tree](0 kdtree)
+* [kdtree k维tree](02kdtree)
 * [octree 八叉树](03octree)
 * [search](04search)
 
