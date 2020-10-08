@@ -11,7 +11,7 @@ PCL（Point Cloud Library）点云库  个人开发环境：Ubuntu18.04
 https://pointclouds.org/
 中文论坛：http://www.pclcn.org/
 GitHub：https://github.com/PointCloudLibrary/pcl
-
+学习基于pcl1.9.1：https://github.com/PointCloudLibrary/pcl/tree/pcl-1.9.1
 
 
 
