@@ -37,3 +37,4 @@ make  // 生成可执行文件命令
 * https://github.com/Yochengliu/awesome-point-cloud-analysis
 * https://github.com/QingyongHu/SoTA-Point-Cloud
 * https://github.com/PointCloudLibrary/pcl
+* 参考书籍：点云库PCL学习教程，朱德海，北京航空航天大学出版社
