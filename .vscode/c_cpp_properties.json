@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/local/include/pcl-1.9",
-                "/usr/include/eigen3"
+                "/usr/include/eigen3",
+                "/usr/include/ni"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
