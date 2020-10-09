@@ -4,12 +4,12 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
+
     {
         "name": "(gdb) Launch",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/${fileBasenameNoExtension}.out",
+        "program": "${workspaceFolder}/build/",
         "miDebuggerPath": "/usr/bin/gdb",
         "preLaunchTask": "build",
         "args": [],
