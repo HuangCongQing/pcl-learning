@@ -1,0 +1,45 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [ // 可以有多个参数
+        {
+            "label": "build", // 编译任务名
+            "type": "shell", // 编译任务的类型，通常为shell/process类型
+            "command": "g++", // 编译命令
+            "args": [
+                "-g",
+                "${workspaceFolder}/${fileBasename}", // include path指令
+                "-I", "/usr/local/include/pcl-1.9",
+                "-I", "/usr/include/eigen3",
+                "-I", "/usr/include/vtk-5.10",
+                "-I", "/usr/include/qhull",
+                "-I", "/usr/include/flann",
+                "-I", "/usr/include/boost",
+                // lib 库文件地址
+                "-L", "/usr/local/lib",
+                "-l", "pcl_io",
+                "-l", "pcl_visualization",
+                "-l", "pcl_common",
+                "-l", "vtkFiltering",
+                "-l", "vtkCommon",
+                "-l", "vtkRendering",
+                "-l", "vtkGraphics",
+                "-L", "/usr/include/x86_64-linux-gnu",
+                "-l", "boost_system",
+                "-o", // 生成指定名称的可执行文件
+                "${workspaceFolder}/${fileBasenameNoExtension}.out"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "cmakebuild",
+            "type": "shell",
+            "command": "cd build && cmake ../ && make",
+            "args": []
+        }
+    ]
+}

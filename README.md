@@ -61,7 +61,7 @@ a graph of code libraries
 * [3D-BoNet：比3D点云实例分割算法快10倍！代码已开源](https://mp.weixin.qq.com/s/VA593ECOsp0UDc82i8uedQ)
 
 ## 相关链接
-
+* 公众号：点云PCL
 * https://github.com/Yochengliu/awesome-point-cloud-analysis
 * https://github.com/QingyongHu/SoTA-Point-Cloud
 * https://github.com/PointCloudLibrary/pcl
