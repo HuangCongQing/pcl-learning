@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: HCQ
+ * @Company(School): UCAS
+ * @Date: 2020-10-04 18:17:00
+ * @LastEditors: HCQ
+ * @LastEditTime: 2020-10-09 13:13:37
+-->
 # pcl
 PCL（Point Cloud Library）点云库  个人开发环境：Ubuntu18.04
 
@@ -8,8 +16,7 @@ PCL（Point Cloud Library）点云库  个人开发环境：Ubuntu18.04
 >*  PCL是BSD授权方式，可以免费进行商业和学术应用。
 
 * 英文官网：https://pcl.readthedocs.io/projects/tutorials/en/latest/#
-https://pointclouds.org/
-* 中文论坛：http://www.pclcn.org/
+    * https://pointclouds.org/
 * GitHub：https://github.com/PointCloudLibrary/pcl
     * 学习基于pcl1.9.1：https://github.com/PointCloudLibrary/pcl/tree/pcl-1.9.1
 
@@ -18,14 +25,6 @@ https://pointclouds.org/
 * 个人笔记：https://www.yuque.com/huangzhongqing/muam1n
 
 
-## 编译过程
-```shell
-mkdir build
-cd build
-cmake .. // 对上一级进行编译
-make  // 生成可执行文件命令
-./pcd_write  // 运行  生成pcd文件并打印5个点的值
-```
 
 ## 目录contents
 a graph of code libraries
@@ -56,9 +55,16 @@ a graph of code libraries
 * [5 visualization可视化](15visualization可视化)
 * [6 keypoints关键点](16keypoints关键点)
 
-## 文章
 
-* [3D-BoNet：比3D点云实例分割算法快10倍！代码已开源](https://mp.weixin.qq.com/s/VA593ECOsp0UDc82i8uedQ)
+## 编译过程
+```shell
+mkdir build
+cd build
+cmake .. // 对上一级进行编译
+make  // 生成可执行文件命令
+./pcd_write  // 运行  生成pcd文件并打印5个点的值
+```
+
 
 ## 相关链接
 * 公众号：点云PCL
