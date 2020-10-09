@@ -1,5 +1,5 @@
 cmake_minimum_required ( VERSION 2.6 FATAL_ERROR)   #对于cmake版本的最低版本的要求
-project(ch2)                                        #建立的工程名，例如源代码目录路径的变量名为CH_DIR
+project(1write_pcd)                                        #建立的工程名，例如源代码目录路径的变量名为CH_DIR
                                                     #工程存储目录变量名为CH_BINARY_DIR
 #要求工程依赖的PCL最低版本为1.3，并且版本至少包含common和IO两个模块  这里的REQUIRED意味着如果对应的库找不到 则CMake配置的过程将完全失败，
 #因为PCL是模块化的，也可以如下操作：
@@ -26,4 +26,5 @@ add_definitions(${PCL_DEFINITIONS})
 add_executable(write_pcd write_pcd.cpp)
 #虽然包含了PCL的头文件，因此编译器知道我们现在访问所用的方法，我们也需要让链接器知道所链接的库，PCL找到库文件由
 #PCL_COMMON_LIBRARIES变量指示，通过target_link_libraries这个宏来出发链接操作
-target_link_libraries(write_pcd ${PCL_COMMON_LIBRARIES} ${PCL_IO_LIBRARIES})
+# target_link_libraries(write_pcd ${PCL_COMMON_LIBRARIES} ${PCL_IO_LIBRARIES}) # 链接common和IO  会报错
+target_link_libraries(write_pcd ${PCL_LIBRARIES}) # 链接PCL所有库

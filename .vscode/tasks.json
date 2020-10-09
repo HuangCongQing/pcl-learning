@@ -12,7 +12,7 @@
                 "${workspaceFolder}/${fileBasename}", // include path指令
                 "-I", "/usr/local/include/pcl-1.9",
                 "-I", "/usr/include/eigen3",
-                "-I", "/usr/include/vtk-5.10",
+                "-I", "/usr/include/vtk-6.3",
                 "-I", "/usr/include/qhull",
                 "-I", "/usr/include/flann",
                 "-I", "/usr/include/boost",

@@ -1,4 +1,4 @@
-# Install script for directory: /home/hcq/pcl_learning/pcl-learning/00pcd_write
+# Install script for directory: /home/hcq/pcl/pcl-learning/00base/00pcd_write
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hcq/pcl_learning/pcl-learning/00pcd_write/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hcq/pcl/pcl-learning/00base/00pcd_write/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
