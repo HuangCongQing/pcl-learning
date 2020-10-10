@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-08 21:46:40
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-08 22:03:47
+ * @LastEditTime: 2020-10-10 18:35:53
  */
 #include <pcl/point_cloud.h>        //点类型定义头文件
 #include <pcl/kdtree/kdtree_flann.h> //kdtree类定义头文件
@@ -27,13 +27,13 @@ main (int argc, char** argv)
 
   for (size_t i = 0; i < cloud->points.size (); ++i)   //循环填充点云数据
   {
-    cloud->points[i].x = 1024.0f * rand () / (RAND_MAX + 1.0f);
+    cloud->points[i].x = 1024.0f * rand() / (RAND_MAX + 1.0f); // // 产生数值为0-1024的浮点数
     cloud->points[i].y = 1024.0f * rand () / (RAND_MAX + 1.0f);
     cloud->points[i].z = 1024.0f * rand () / (RAND_MAX + 1.0f);
   }
  //创建KdTreeFLANN对象，并把创建的点云设置为输入,创建一个searchPoint变量作为查询点
-  pcl::KdTreeFLANN<pcl::PointXYZ> kdtree;
- //设置搜索空间
+  pcl::KdTreeFLANN<pcl::PointXYZ> kdtree; // pcl::KdTreeFLANN<PointT, Dist>::setInputCloud (const PointCloudConstPtr &cloud, const IndicesConstPtr &indices)
+  //设置搜索空间
   kdtree.setInputCloud (cloud);
   //设置查询点并赋随机值
   pcl::PointXYZ searchPoint;
@@ -92,15 +92,47 @@ main (int argc, char** argv)
   return 0;
 }
 
-// K nearest neighbor search at (496.165 566.915 291.089) with K=10
-//     489.233 546.223 309.002 (squared distance: 797.095)
-//     520.672 589.71 262.249 (squared distance: 1951.96)
-//     463.981 513.441 291.076 (squared distance: 3895.31)
-//     570.873 524.83 291.856 (squared distance: 7352.9)
-//     446.205 583.773 359.421 (squared distance: 7449.44)
-//     563.249 506.541 261.833 (squared distance: 9001.09)
-//     419.788 605.717 346.714 (squared distance: 10433.2)
-//     491.057 669.789 306.901 (squared distance: 10859.2)
-//     388.539 556.211 300.09 (squared distance: 11779.1)
-//     518.13 555.791 397.364 (squared distance: 11900.5)
-// Neighbors within radius search at (496.165 566.915 291.089) with radius=6.36844
+// K nearest neighbor search at (384.369 386.372 300.143) with K=10
+//     451.114 363.553 229.213 (squared distance: 10006.7)
+//     452.721 398.977 207.076 (squared distance: 13492.4)
+//     276.971 343.368 327.111 (squared distance: 14111)
+//     447.772 491.576 334 (squared distance: 16234.2)
+//     410.276 386.502 175.288 (squared distance: 16259.9)
+//     445.201 488.637 253.626 (squared distance: 16322.6)
+//     257.128 435.577 321.633 (squared distance: 19073.3)
+//     312.382 389.858 178.369 (squared distance: 20023)
+//     439.166 412.965 167.177 (squared distance: 21390)
+//     482.03 493.711 266.617 (squared distance: 22183.4)
+// Neighbors within radius search at (384.369 386.372 300.143) with radius=193.159
+//     451.114 363.553 229.213 (squared distance: 10006.7)
+//     452.721 398.977 207.076 (squared distance: 13492.4)
+//     276.971 343.368 327.111 (squared distance: 14111)
+//     447.772 491.576 334 (squared distance: 16234.2)
+//     410.276 386.502 175.288 (squared distance: 16259.9)
+//     445.201 488.637 253.626 (squared distance: 16322.6)
+//     257.128 435.577 321.633 (squared distance: 19073.3)
+//     312.382 389.858 178.369 (squared distance: 20023)
+//     439.166 412.965 167.177 (squared distance: 21390)
+//     482.03 493.711 266.617 (squared distance: 22183.4)
+//     521.246 429.693 256.285 (squared distance: 22535.5)
+//     512.669 307.615 320.109 (squared distance: 23062.3)
+//     529.352 399.11 354.953 (squared distance: 24186.5)
+//     292.235 430.095 178.472 (squared distance: 25204.2)
+//     468.447 428.21 169.938 (squared distance: 25772.9)
+//     486.896 429.648 184.04 (squared distance: 25864.7)
+//     484.24 305.494 397.702 (squared distance: 26033.2)
+//     285.843 501.384 233.359 (squared distance: 27395.3)
+//     314.749 252.534 227.244 (squared distance: 28073.7)
+//     370.492 316.152 146.118 (squared distance: 28846.8)
+//     272.179 257.047 296.281 (squared distance: 29326.1)
+//     424.155 426.806 135.94 (squared distance: 30180.5)
+//     535.554 370.488 215.772 (squared distance: 30227.8)
+//     237.352 309.898 353.828 (squared distance: 30344.3)
+//     222.959 424.764 356.473 (squared distance: 30700.3)
+//     505.552 501.396 241.199 (squared distance: 31390.5)
+//     519.049 502.714 303.867 (squared distance: 31688.1)
+//     374.487 562.587 337.03 (squared distance: 32510.2)
+//     471.023 434.838 140.425 (squared distance: 35367.6)
+//     204.779 353.992 361.033 (squared distance: 37008.4)
+//     219.731 482.102 272.668 (squared distance: 37024.6)
+
