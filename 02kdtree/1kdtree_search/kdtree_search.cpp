@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-08 21:46:40
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-10 18:35:53
+ * @LastEditTime: 2020-10-10 18:59:26
  */
 #include <pcl/point_cloud.h>        //点类型定义头文件
 #include <pcl/kdtree/kdtree_flann.h> //kdtree类定义头文件
@@ -78,7 +78,7 @@ main (int argc, char** argv)
             << " " << searchPoint.z
             << ") with radius=" << radius << std::endl;
 
-
+  // 假设我们的kdtree返回了大于0个近邻。那么它将打印出在我们"searchPoint"附近的10个最近的邻居并把它们存到先前创立的向量中。
   if ( kdtree.radiusSearch (searchPoint, radius, pointIdxRadiusSearch, pointRadiusSquaredDistance) > 0 )  //执行半径R内近邻搜索方法
   {
     for (size_t i = 0; i < pointIdxRadiusSearch.size (); ++i)
