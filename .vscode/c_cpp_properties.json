@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "/usr/local/include/pcl-1.9",
                 "/usr/include/eigen3",
-                "/usr/include/ni"
+                "/usr/include/ni",
+                "/usr/include/vtk-6.3"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
