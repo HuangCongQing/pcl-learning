@@ -4,10 +4,9 @@
  * @Company(School): UCAS
  * @Date: 2020-10-12 16:23:42
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-12 17:55:37
+ * @LastEditTime: 2020-10-12 19:21:31
  */
 #include <iostream>
-
 #include <boost/thread/thread.hpp>
 #include <pcl/common/common_headers.h>
 #include <pcl/features/normal_3d.h>
