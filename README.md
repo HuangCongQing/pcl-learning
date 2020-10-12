@@ -62,7 +62,7 @@ mkdir build
 cd build
 cmake .. // 对上一级进行编译
 make  // 生成可执行文件命令
-./pcd_write  // 运行  生成pcd文件并打印5个点的值
+./executedemo  // 运行可执行文件
 ```
 
 
