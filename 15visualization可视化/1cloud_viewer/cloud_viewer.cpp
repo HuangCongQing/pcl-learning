@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-12 09:59:01
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-12 10:17:15
+ * @LastEditTime: 2020-10-12 15:45:37
  */
 #include <pcl/visualization/cloud_viewer.h> //类cloud_viewer头文件申明
 #include <iostream>                         //标准输入输出头文件申明
@@ -46,19 +46,24 @@ void viewerPsycho(pcl::visualization::PCLVisualizer &viewer)
    *************************************************************/
 int main()
 {
+    // 创建点云渲染对象，导入待渲染文件
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGBA>); //声明cloud
     pcl::io::loadPCDFile("room_scan1.pcd", *cloud);                                        //加载点云文件
 
+    //创建点云渲染句柄
     pcl::visualization::CloudViewer viewer("Cloud Viewer"); //创建viewer对象
-
     //showCloud函数是同步的，在此处等待直到渲染显示为止
     viewer.showCloud(cloud);
 
+    //下面的内容是一个模板，支持用户进行更复杂的操作。
+
     //该注册函数在可视化的时候只执行一次
-    viewer.runOnVisualizationThreadOnce(viewerOneOff);
+    viewer.runOnVisualizationThreadOnce(viewerOneOff); //只运行一次的业务逻辑可以放在viewerOneOff函数里，比如设置背景、画个三维球等等。
 
     //该注册函数在渲染输出时每次都调用
-    viewer.runOnVisualizationThread(viewerPsycho);
+    viewer.runOnVisualizationThread(viewerPsycho); //需要每轮渲染的业务逻辑可以放在viewerPsycho
+    //现在的业务逻辑仅仅是完成用户数据的单调增加，此处还可以完成更多丰富的操作。
+
     while (!viewer.wasStopped())
     {
         //此处可以添加其他处理
