@@ -13,6 +13,7 @@
 # /TODO
 # 忽略 build/ 目录下的所有文件
 build/
+！*.pcd
 # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 # doc/*.txt
 
