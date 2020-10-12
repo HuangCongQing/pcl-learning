@@ -30,30 +30,30 @@ PCL（Point Cloud Library）点云库  个人开发环境：Ubuntu18.04
 a graph of code libraries
 * [00base](00base)
 ##### step1
-* [common](01common )
+* [01common](01common )
 
 ##### step2
-* [kdtree k维tree](02kdtree)
-* [octree 八叉树](03octree)
-* [search](04search)
+* [02kdtree k维tree](02kdtree)
+* [03octree 八叉树](03octree)
+* [04search](04search)
 
-* [sample consensus  抽样一致性模块](05sampleconsensus抽样一致性模块)
-* [range-images](06range-images)
-* [tracking](07tracking )
+* [05sample consensus  抽样一致性模块](05sampleconsensus抽样一致性模块)
+* [06range-images](06range-images)
+* [07tracking](07tracking )
 
 ##### step3
-* [1 io 输入输出](08IO输入输出)
-* [2 filters 滤波](09filters滤波)
-* [3 features 特征](10features特征)
+* [08 io 输入输出](08IO输入输出)
+* [09 filters 滤波](09filters滤波)
+* [10 features 特征](10features特征)
 
 
 ##### step4
-* [1 surface表面 ](11surface表面 )
-* [2 segmentation分割](12segmentation分割)
-* [3 recognition识别](13recognition识别)
-* [4 registration配准](14registration配准)
-* [5 visualization可视化](15visualization可视化)
-* [6 keypoints关键点](16keypoints关键点)
+* [11 surface表面 ](11surface表面 )
+* [12 segmentation分割](12segmentation分割)
+* [13 recognition识别](13recognition识别)
+* [14 registration配准](14registration配准)
+* [15 visualization可视化](15visualization可视化)
+* [16 keypoints关键点](16keypoints关键点)
 
 
 ## 编译过程
