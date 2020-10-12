@@ -56,11 +56,14 @@ boost::shared_ptr<pcl::visualization::PCLVisualizer> simpleVis(pcl::PointCloud<p
     // --------------------------------------------
     // -----Open 3D viewer and add point cloud-----
     // --------------------------------------------
-    //创建视窗对象并给标题栏设置一个名称“3D Viewer”并将它设置为boost::shared_ptr智能共享指针，这样可以保证指针在程序中全局使用，而不引起内存错误
+    //1 初始化
+    //创建一个实例
+    // 创建视窗对象并给标题栏设置一个名称“3D Viewer”并将它设置为boost::shared_ptr智能共享指针，这样可以保证指针在程序中全局使用，而不引起内存错误
     boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("3D Viewer"));
     //设置视窗的背景色，可以任意设置RGB的颜色，这里是设置为黑色
     viewer->setBackgroundColor(0, 0, 0);
-    /*这是最重要的一行，我们将点云添加到视窗对象中，并定一个唯一的字符串作为ID 号，利用此字符串保证在其他成员中也能
+    /*将点云加入到viewer
+    这是最重要的一行，我们将点云添加到视窗对象中，并定一个唯一的字符串作为ID 号，利用此字符串保证在其他成员中也能
    标志引用该点云，多次调用addPointCloud可以实现多个点云的添加，，每调用一次就会创建一个新的ID号，如果想更新一个
    已经显示的点云，必须先调用removePointCloud（），并提供需要更新的点云ID 号，
   *******************************************************************************************/
@@ -68,12 +71,13 @@ boost::shared_ptr<pcl::visualization::PCLVisualizer> simpleVis(pcl::PointCloud<p
     //用于改变显示点云的尺寸，可以利用该方法控制点云在视窗中的显示方法，
     viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud");
     /*******************************************************************************************************
+    添加坐标系（即红绿蓝三色轴，放置在原点） （即红绿蓝三色轴，放置在原点）
   查看复杂的点云，经常让人感到没有方向感，为了保持正确的坐标判断，需要显示坐标系统方向，可以通过使用X（红色）
   Y（绿色 ）Z （蓝色）圆柱体代表坐标轴的显示方式来解决，圆柱体的大小可以通过scale参数来控制，本例中scale设置为1.0
   
  ******************************************************************************************************/
-    viewer->addCoordinateSystem(1.0);
-    //通过设置照相机参数使得从默认的角度和方向观察点云
+    viewer->addCoordinateSystem(1.0); //1.0指轴的长度
+    ////初始化默认相机参数(通过设置照相机参数使得从默认的角度和方向观察点云)
     viewer->initCameraParameters();
     return (viewer);
 }
@@ -98,8 +102,9 @@ boost::shared_ptr<pcl::visualization::PCLVisualizer> rgbVis(pcl::PointCloud<pcl:
   设置窗口的背景颜色后，创建一个颜色处理对象，PointCloudColorHandlerRGBField利用这样的对象显示自定义颜色数据，PointCloudColorHandlerRGBField
    对象得到每个点云的RGB颜色字段，
   **************************************************************************************************************/
-
+    // //创建一个点云的句柄
     pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(cloud);
+    // //将点云加入到viewer
     viewer->addPointCloud<pcl::PointXYZRGB>(cloud, rgb, "sample cloud");
     viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "sample cloud");
     viewer->addCoordinateSystem(1.0);
@@ -118,7 +123,7 @@ boost::shared_ptr<pcl::visualization::PCLVisualizer> customColourVis(pcl::PointC
     // --------------------------------------------
     boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("3D Viewer"));
     viewer->setBackgroundColor(0, 0, 0);
-    //创建一个自定义的颜色处理器PointCloudColorHandlerCustom对象，并设置颜色为纯绿色
+    //创建一个自定义的颜色处理器PointCloudColorHandlerCustom对象，并设置颜色为纯绿色(创建一个点云的句柄)
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(cloud, 0, 255, 0);
     //addPointCloud<>()完成对颜色处理器对象的传递
     viewer->addPointCloud<pcl::PointXYZ>(cloud, single_color, "sample cloud");
