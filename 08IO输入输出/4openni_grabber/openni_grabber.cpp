@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-09 16:34:09
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-09 16:37:25
+ * @LastEditTime: 2020-10-13 10:50:30
  */
 #include <pcl/point_cloud.h>       //点云类定义头文件
 #include <pcl/point_types.h>       //点 类型定义头文件
@@ -31,7 +31,7 @@ public:
 
     void run()
     {
-        pcl::Grabber *interface = new pcl::OpenNIGrabber(); //创建OpenNI采集对象
+        pcl::Grabber *interface = new pcl::OpenNIGrabber(); //创建OpenNI采集对象  ，还没安装kinect 1.0 驱动
 
         // 定义回调函数
         boost::function<void(const pcl::PointCloud<pcl::PointXYZRGBA>::ConstPtr &)> f =
