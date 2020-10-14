@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-13 16:33:43
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-13 17:42:07
+ * @LastEditTime: 2020-10-14 18:28:11
  */
 
 #include <pcl/ModelCoefficients.h>
@@ -16,6 +16,7 @@
 #include <pcl/sample_consensus/method_types.h>
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/visualization/pcl_visualizer.h> // 可视化
 
 typedef pcl::PointXYZ PointT;
 
@@ -79,7 +80,7 @@ int main(int argc, char **argv)
     pcl::PointCloud<PointT>::Ptr cloud_plane(new pcl::PointCloud<PointT>());
     extract.filter(*cloud_plane);
     std::cerr << "PointCloud representing the planar component: " << cloud_plane->points.size() << " data points." << std::endl;
-    writer.write("table_scene_mug_stereo_textured_plane.pcd", *cloud_plane, false);
+    writer.write("table_scene_mug_stereo_textured_plane.pcd", *cloud_plane, false); // 分割得到的平面
 
     // Remove the planar inliers, extract the rest
     extract.setNegative(true);
@@ -115,7 +116,28 @@ int main(int argc, char **argv)
     else
     {
         std::cerr << "PointCloud representing the cylindrical component: " << cloud_cylinder->points.size() << " data points." << std::endl;
-        writer.write("table_scene_mug_stereo_textured_cylinder.pcd", *cloud_cylinder, false);
+        writer.write("table_scene_mug_stereo_textured_cylinder.pcd", *cloud_cylinder, false); // 分割得到的平面
+    }
+    // 可视化
+    pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("three 三窗口 "));
+    int v1(0); //设置左右窗口
+    int v2(1);
+    int v3(2);
+    viewer->createViewPort(0.0, 0.0, 0.5,1.0, v1); //(Xmin,Ymin,Xmax,Ymax)设置窗口坐标
+    viewer->createViewPort(0.5, 0.0, 1.0, 0.5, v2);
+    viewer->createViewPort(0.5, 0.5, 1.0, 1.0, v3);
+
+    pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_out_red(cloud, 255, 0, 0); // 显示红色点云
+    viewer->addPointCloud(cloud, cloud_out_red, "cloud_out1", v1);
+
+    pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_out_green(cloud, 0, 255, 0); // 显示绿色点云
+    viewer->addPointCloud(cloud_plane, cloud_out_green, "cloud_out2", v2);  // 平面
+
+    pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_out_blue(cloud, 0, 0, 255); // 显示蓝色点云
+    viewer->addPointCloud(cloud_cylinder, cloud_out_blue, "cloud_out3", v3); // 圆柱
+    while (!viewer->wasStopped())
+    {
+        viewer->spinOnce();
     }
     return (0);
 }
