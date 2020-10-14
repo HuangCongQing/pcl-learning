@@ -1,44 +1,64 @@
 /*
- * @Description: 双窗口显示 https://blog.csdn.net/uranus1992/article/details/84545820
+ * @Description: add: 两个窗口显示点云（滤波前&滤波后） https://blog.csdn.net/weixin_45377028/article/details/104564467
  * @Author: HCQ
  * @Company(School): UCAS
  * @Date: 2020-10-14 11:11:11
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-14 11:18:43
+ * @LastEditTime: 2020-10-14 11:30:58
  */
-
 #include <iostream>
-
-#include <boost/thread/thread.hpp>
-#include <pcl/common/common_headers.h>
-#include <pcl/features/normal_3d.h>
 #include <pcl/io/pcd_io.h>
+#include <pcl/point_types.h>
+#include <pcl/filters/statistical_outlier_removal.h>
 #include <pcl/visualization/pcl_visualizer.h>
-#include <pcl/console/parse.h>
+#include <pcl/filters/passthrough.h>
 
-boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("3D Viewer"));
+int main(int argc, char **argv)
+{
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered(new pcl::PointCloud<pcl::PointXYZ>);
+    // 填入点云数据
+    pcl::PCDReader reader;
+    // 把路径改为自己存放文件的路径
+    reader.read<pcl::PointXYZ>("../table_scene_mug_stereo_textured.pcd", *cloud);
+    std::cerr << "Cloud before filtering: " << std::endl;
+    std::cerr << *cloud << std::endl;
 
-viewer->initCameraParameters()
-// V1视口位于窗口左半部分，V2视口位于右半部分。
-int v1(0);
+    pcl::visualization::PCLVisualizer viewer("双窗口学习");
+    //添加坐标系
+    //viewer.addCoordinateSystem(0,0);
 
-viewer->createViewPort(0.0, 0.0, 0.5, 1.0, v1);
+    int v1(0); //设置左右窗口
+    int v2(1);
 
-viewer->setBackgroundColor(0, 0, 0, v1);
+    viewer.createViewPort(0.0, 0.0, 0.5, 1, v1);
+    viewer.setBackgroundColor(0, 0, 0, v1);
 
-viewer->addText("Radius: 0.01", 10, 10, "v1 text", v1);
+    viewer.createViewPort(0.5, 0.0, 1, 1, v2);
+    viewer.setBackgroundColor(0.5, 0.5, 0.5, v2);
 
-pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(cloud);
+    pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_out_blue(cloud, 0, 0, 255); // 显示蓝色点云
+    viewer.addPointCloud(cloud, cloud_out_blue, "cloud_out1", v1);
 
-viewer->addPointCloud<pcl::PointXYZRGB>(cloud, rgb, "sample cloud1", v1);
-int v2(0);
-
-viewer->createViewPort(0.5, 0.0, 1.0, 1.0, v2); // createViewPort是用于创建新视口的函数，所需的4个参数分别是视口在X轴的最小值、最大值，Y轴的最小值、最大值，取值在0-1.
-
-viewer->setBackgroundColor(0.3, 0.3, 0.3, v2);
-
-viewer->addText("Radius: 0.1", 10, 10, "v2 text", v2);
-
-pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZRGB> single_color(cloud, 0, 255, 0);
-
-viewer->addPointCloud<pcl::PointXYZRGB>(cloud, single_color, "sample cloud2", v2);
+    pcl::PassThrough<pcl::PointXYZ> pass; //创建滤波器 pass
+    pass.setInputCloud(cloud);
+    pass.setFilterFieldName("z");
+    pass.setFilterLimits(0, 1.5);
+    //pass.setFilterLimitsNegative (true);
+    pass.filter(*cloud_filtered);
+    std::cerr << "Cloud after filtering: " << std::endl;
+    std::cerr << *cloud_filtered << std::endl;
+    /*pcl::PCDWriter writer;*/
+    //writer.write<pcl::PointXYZ> ("table_scene_lms400_inliers.pcd", *cloud_filtered, false);
+    //sor.setNegative (true);
+    //sor.filter (*cloud_filtered);
+    //writer.write<pcl::PointXYZ> ("table_scene_lms400_outliers.pcd", *cloud_filtered, false);
+    pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_out_orage(cloud_filtered, 250, 128, 10); //显示橘色点云
+    viewer.addPointCloud(cloud_filtered, cloud_out_orage, "cloud_out2", v2);
+    //viewer.setSize(960, 780);
+    while (!viewer.wasStopped())
+    {
+        viewer.spinOnce();
+    }
+    return 0;
+}
