@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-12 09:59:01
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-12 15:45:37
+ * @LastEditTime: 2020-10-14 11:05:30
  */
 #include <pcl/visualization/cloud_viewer.h> //类cloud_viewer头文件申明
 #include <iostream>                         //标准输入输出头文件申明
@@ -73,3 +73,24 @@ int main()
     }
     return 0;
 }
+//  总结
+
+// pcl_points_visualization.cpp: 定义控制台应用程序的入口点。
+
+// #include "stdafx.h"
+// #include<pcl/visualization/cloud_viewer.h>
+// #include<pcl/point_cloud.h>
+// #include<pcl/io/pcd_io.h>
+
+// int main()
+// {
+// 	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
+// 	pcl::io::loadPCDFile("table_scene_lms400.pcd", *cloud);
+// 	pcl::visualization::CloudViewer viewer("cloud viewer");
+// 	viewer.showCloud(cloud);
+// 	while (!viewer.wasStopped())
+// 	{
+// 	}
+//     return 0;
+// }
+
