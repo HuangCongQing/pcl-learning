@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-14 11:11:11
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-14 11:30:58
+ * @LastEditTime: 2020-10-14 11:40:53
  */
 #include <iostream>
 #include <pcl/io/pcd_io.h>
@@ -31,10 +31,10 @@ int main(int argc, char **argv)
     int v1(0); //设置左右窗口
     int v2(1);
 
-    viewer.createViewPort(0.0, 0.0, 0.5, 1, v1);
+    viewer.createViewPort(0.0, 0.0, 0.5, 1, v1); //(Xmin,Ymin,Xmax,Ymax)设置窗口坐标
     viewer.setBackgroundColor(0, 0, 0, v1);
 
-    viewer.createViewPort(0.5, 0.0, 1, 1, v2);
+    viewer.createViewPort(0.5, 0.0, 1, 1, v2); //(Xmin,Ymin,Xmax,Ymax)设置窗口坐标
     viewer.setBackgroundColor(0.5, 0.5, 0.5, v2);
 
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_out_blue(cloud, 0, 0, 255); // 显示蓝色点云
