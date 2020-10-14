@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-13 16:33:43
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-14 18:28:11
+ * @LastEditTime: 2020-10-14 18:41:30
  */
 
 #include <pcl/ModelCoefficients.h>
@@ -135,9 +135,13 @@ int main(int argc, char **argv)
 
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> cloud_out_blue(cloud, 0, 0, 255); // 显示蓝色点云
     viewer->addPointCloud(cloud_cylinder, cloud_out_blue, "cloud_out3", v3); // 圆柱
-    while (!viewer->wasStopped())
-    {
-        viewer->spinOnce();
-    }
+
+    // 1. 阻塞式
+    viewer->spin();
+    // 2. 非阻塞式
+    // while (!viewer->wasStopped())
+    // {
+    //     viewer->spinOnce();
+    // }
     return (0);
 }
