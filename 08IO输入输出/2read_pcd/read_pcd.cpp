@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-09 12:56:02
  * @LastEditors: HCQ
- * @LastEditTime: 2020-10-09 13:02:37
+ * @LastEditTime: 2020-10-14 10:08:45
  */
 #include <iostream>          //标准C++库中的输入输出的头文件
 #include <pcl/io/pcd_io.h>   //PCD读写类相关的头文件
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
 
     //打开点云文件
-    if (pcl::io::loadPCDFile<pcl::PointXYZ>("test_pcd.pcd", *cloud) == -1)
+    if (pcl::io::loadPCDFile<pcl::PointXYZ>("../test_pcd.pcd", *cloud) == -1)
     {
         PCL_ERROR("Couldn't read file test_pcd.pcd \n");
         return (-1);
