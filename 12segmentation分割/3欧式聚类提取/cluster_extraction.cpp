@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-13 16:33:43
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-18 11:45:29
+ * @LastEditTime: 2020-10-18 11:48:23
  */
 
 
@@ -93,7 +93,7 @@ main (int argc, char** argv)
   ec.setSearchMethod (tree);                    //设置点云的搜索机制
   ec.setInputCloud (cloud_filtered);
   ec.extract (cluster_indices);           //从点云中提取聚类，并将点云索引保存在cluster_indices中
-  //迭代访问点云索引cluster_indices,直到分割处所有聚类
+  //迭代访问点云索引cluster_indices,直到分割出所有聚类
   int j = 0;
   for (std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin (); it != cluster_indices.end (); ++it)
   {
