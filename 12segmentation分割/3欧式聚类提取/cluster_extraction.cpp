@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-13 16:33:43
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-18 10:03:36
+ * @LastEditTime: 2020-10-18 11:45:29
  */
 
 
@@ -30,16 +30,16 @@ main (int argc, char** argv)
   // Read in the cloud data
   pcl::PCDReader reader;
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>), cloud_f (new pcl::PointCloud<pcl::PointXYZ>);
-  reader.read ("../table_scene_lms400.pcd", *cloud);
+  reader.read ("../table_scene_lms400.pcd", *cloud); // 点云文件
   std::cout << "PointCloud before filtering has: " << cloud->points.size () << " data points." << std::endl; //*
 
   // Create the filtering object: downsample the dataset using a leaf size of 1cm
-  pcl::VoxelGrid<pcl::PointXYZ> vg;
+  pcl::VoxelGrid<pcl::PointXYZ> vg; // VoxelGrid类在输入点云数据上创建3D体素网格（将体素网格视为一组空间中的微小3D框
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
-  vg.setInputCloud (cloud);
-  vg.setLeafSize (0.01f, 0.01f, 0.01f);
-  vg.filter (*cloud_filtered);
-  std::cout << "PointCloud after filtering has: " << cloud_filtered->points.size ()  << " data points." << std::endl; //*
+  vg.setInputCloud (cloud); //输入
+  vg.setLeafSize (0.01f, 0.01f, 0.01f);  // setLeafSize (float lx, float ly, float lz)
+  vg.filter (*cloud_filtered); //输出
+  std::cout << "PointCloud after filtering has: " << cloud_filtered->points.size ()  << " data points." << std::endl; //*滤波后
    //创建平面模型分割的对象并设置参数
   pcl::SACSegmentation<pcl::PointXYZ> seg;
   pcl::PointIndices::Ptr inliers (new pcl::PointIndices);
@@ -54,10 +54,10 @@ main (int argc, char** argv)
   seg.setDistanceThreshold (0.02);           //设置阀值
 
   int i=0, nr_points = (int) cloud_filtered->points.size ();
-  while (cloud_filtered->points.size () > 0.3 * nr_points)
+  while (cloud_filtered->points.size () > 0.3 * nr_points) // 滤波停止条件
   {
     // Segment the largest planar component from the remaining cloud
-    seg.setInputCloud (cloud_filtered);
+    seg.setInputCloud (cloud_filtered); // 输入
     seg.segment (*inliers, *coefficients);
     if (inliers->indices.size () == 0)
     {
@@ -72,7 +72,7 @@ main (int argc, char** argv)
     extract.setNegative (false);
 
     // Get the points associated with the planar surface
-    extract.filter (*cloud_plane);
+    extract.filter (*cloud_plane);// [平面
     std::cout << "PointCloud representing the planar component: " << cloud_plane->points.size () << " data points." << std::endl;
 
     //  // 移去平面局内点，提取剩余点云
@@ -107,8 +107,8 @@ main (int argc, char** argv)
 
     std::cout << "PointCloud representing the Cluster: " << cloud_cluster->points.size () << " data points." << std::endl;
     std::stringstream ss;
-    ss << "cloud_cluster_" << j << ".pcd";
-    writer.write<pcl::PointXYZ> (ss.str (), *cloud_cluster, false); //*
+    ss << "../cloud_cluster_" << j << ".pcd";
+    writer.write<pcl::PointXYZ> (ss.str (), *cloud_cluster, false); // 保存文件
     j++;
   }
 
