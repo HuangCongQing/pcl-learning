@@ -4,8 +4,8 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-19 15:04:50
- * @LastEditTime: 2020-10-19 16:01:14
- * @FilePath: /pcl-learning/10features特征/2估计点云子集的表面法线/normal_estimation_subdset_points.cpp
+ * @LastEditTime: 2020-10-19 18:34:17
+ * @FilePath: /pcl-learning/10features特征/2估计点云子集的表面法线(error)/normal_estimation_subdset_points.cpp
  */
 #include <pcl/point_types.h>
 #include <pcl/io/pcd_io.h>
@@ -27,6 +27,7 @@ pcl::io::loadPCDFile ("../table_scene_lms400.pcd", *cloud);
   ne.setInputCloud (cloud);
 
   // 传递索引
+  // std::shared_ptr<std::vector<int> > indicesptr (new std::vector<int> (indices)); // 报错
   pcl::shared_ptr<std::vector<int> > indicesptr (new std::vector<int> (indices)); // 报错
   ne.setIndices (indicesptr);
 
