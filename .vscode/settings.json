@@ -1,3 +1,19 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "fileheader.customMade": {
+        "Description": "",
+        "Author": "HCQ",
+        "Company(School)": "UCAS",
+        "Email": "1756260160@qq.com",
+        "Date": "Do not edit",
+        "LastEditTime": "Do not edit",
+        "FilePath": "Do not edit"
+    },
+    "fileheader.cursorMode": {
+        "description": "",
+        "event": "",
+        "param": "",
+        "return": ""
+    },
+    "cmake.configureOnOpen": false
 }
