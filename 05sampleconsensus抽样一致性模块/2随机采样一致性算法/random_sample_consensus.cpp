@@ -94,7 +94,7 @@ main(int argc, char **argv) {
     // 平面
     pcl::SampleConsensusModelPlane<pcl::PointXYZ>::Ptr
             model_p(new pcl::SampleConsensusModelPlane<pcl::PointXYZ>(cloud));
-    if (pcl::console::find_argument(argc, argv, "-f") >= 0) {
+    if (pcl::console::find_argument(argc, argv, "-f") >= 0) {  // -f
         pcl::RandomSampleConsensus<pcl::PointXYZ> ransac(model_p);
         ransac.setDistanceThreshold(.01);
         ransac.computeModel();
@@ -107,7 +107,7 @@ main(int argc, char **argv) {
     }
 
     // copies all inliers of the model computed to another PointCloudqq
-    // 讲cloud中指定索引的点拷贝到final点云中
+    // 将cloud中指定索引的点拷贝到final点云中
     pcl::copyPointCloud(*cloud, inliers, *final);
 
     // creates the visualization object and adds either our original cloud or all of the inliers
