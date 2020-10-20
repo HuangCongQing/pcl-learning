@@ -7,7 +7,7 @@
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-19 15:04:50
  * @LastEditTime: 2020-10-19 18:34:17
- * @FilePath: /pcl-learning/05sampleconsensus抽样一致性模块/1随机采样一致性算法/random_sample_consensus.cpp
+ * @FilePath: /pcl-learning/05sampleconsensus抽样一致性模块/2随机采样一致性算法/random_sample_consensus.cpp
  */
 
 #include <iostream>
@@ -64,7 +64,7 @@ main(int argc, char **argv) {
     cloud->is_dense = false;
     cloud->points.resize(cloud->width * cloud->height);
     for (std::size_t i = 0; i < cloud->points.size(); ++i) {
-        if (pcl::console::find_argument(argc, argv, "-s") >= 0 || pcl::console::find_argument(argc, argv, "-sf") >= 0) {
+        if (pcl::console::find_argument(argc, argv, "-s") >= 0 || pcl::console::find_argument(argc, argv, "-sf") >= 0) {  // -s   -sf
             cloud->points[i].x = 1024 * rand() / (RAND_MAX + 1.0);
             cloud->points[i].y = 1024 * rand() / (RAND_MAX + 1.0);
             if (i % 5 == 0)     // 可能会散落在球体外
