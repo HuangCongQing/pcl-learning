@@ -6,14 +6,14 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-21 15:08:41
- * @LastEditTime: 2020-10-21 15:45:03
+ * @LastEditTime: 2020-10-21 15:52:15
  * @FilePath: /pcl-learning/06range-images深度图像/1从点云创建深度图/range_image_creation.cpp
  */
 
-#include <pcl/range_image/range_image.h>
+#include <pcl/range_image/range_image.h> // //关于深度图像的头文件
 #include <pcl/io/pcd_io.h>
-#include <pcl/visualization/pcl_visualizer.h>
-#include <pcl/visualization/range_image_visualizer.h>
+#include <pcl/visualization/pcl_visualizer.h>  //  //PCL可视化的头文件
+#include <pcl/visualization/range_image_visualizer.h> // //深度图可视化的头文件
 
 int main(int argc, char **argv)
 {
