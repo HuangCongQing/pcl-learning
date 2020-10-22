@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-04 18:17:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-21 16:51:24
+ * @LastEditTime: 2020-10-22 10:27:29
 -->
 # pcl
 PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
@@ -26,7 +26,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 Tips:
 * ubuntu下使用PCL，需要写CMakeLists.txt文件，然后编译才可以生成可执行文件.
-* 可执行文件在build文件夹下，所有运行可执行文件是，后面添加参数的pcd文件，应放在build文件夹下才能获取到。（所有注意文件路径）
+* 可执行文件在build文件夹下，所以运行可执行文件时，后面添加参数的pcd文件，应放在build文件夹下才能获取到。（注意文件路径）
 
 
 
