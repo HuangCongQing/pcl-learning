@@ -8,5 +8,5 @@ include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-add_executable (fitting_curve_2d fitting_curve_2d.cpp)
-target_link_libraries (fitting_curve_2d ${PCL_LIBRARIES})
+add_executable (bspline_fitting bspline_fitting.cpp)
+target_link_libraries (bspline_fitting ${PCL_LIBRARIES})
