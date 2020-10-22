@@ -1,10 +1,11 @@
 /*
  * @Description:  如何逐步匹配多幅点云    https://www.cnblogs.com/li-yao7758258/p/6489585.html
+ * 编译执行： ./pairwise_incremental_registration ../pairwise/frame_00000.pcd ../pairwise/capture0001.pcd  ../pairwise/capture0002.pcd  ../pairwise/capture0003.pcd  ../pairwise/capture0004.pcd   ../pairwise/capture0005.pcd
  * @Author: HCQ
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-22 17:20:55
- * @LastEditTime: 2020-10-22 17:46:00
+ * @LastEditTime: 2020-10-22 18:14:02
  * @FilePath: /pcl-learning/14registration配准/2如何逐步匹配多幅点云/pairwise_incremental_registration.cpp
  */
 #include <boost/make_shared.hpp>               //boost指针相关头文件
