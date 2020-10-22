@@ -5,7 +5,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-22 17:20:55
- * @LastEditTime: 2020-10-22 18:14:02
+ * @LastEditTime: 2020-10-22 18:23:55
  * @FilePath: /pcl-learning/14registration配准/2如何逐步匹配多幅点云/pairwise_incremental_registration.cpp
  */
 #include <boost/make_shared.hpp>               //boost指针相关头文件
@@ -290,7 +290,7 @@ int main(int argc, char **argv)
     PointCloud::Ptr result(new PointCloud), source, target;
     Eigen::Matrix4f GlobalTransform = Eigen::Matrix4f::Identity(), pairTransform;
 
-    for (size_t i = 1; i < data.size(); ++i) //循环处理所有点云
+    for (size_t i = 1; i < data.size(); ++i) //循环处理所有点云================重点======================================
     {
         source = data[i - 1].cloud; //连续配准
         target = data[i].cloud;     // 相邻两组点云
@@ -300,7 +300,7 @@ int main(int argc, char **argv)
         PointCloud::Ptr temp(new PointCloud);
         PCL_INFO("Aligning %s (%d) with %s (%d).\n", data[i - 1].f_name.c_str(), source->points.size(), data[i].f_name.c_str(), target->points.size());
              // pairTransform返回从目标点云target到source的变换矩阵
-            pairAlign(source, target, temp, pairTransform, true);
+            pairAlign(source, target, temp, pairTransform, true);  // ===================重点=========================
 
         //把当前两两配准后的点云temp转化到全局坐标系下返回result
         pcl::transformPointCloud(*temp, *result, GlobalTransform);
