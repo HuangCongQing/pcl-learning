@@ -4,11 +4,12 @@
  * @Company(School): UCAS
  * @Date: 2020-10-04 18:17:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-24 17:40:49
+ * @LastEditTime: 2020-10-24 17:46:09
 -->
 # pcl
 PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
+@[双愚](https://github.com/HuangCongQing/pcl-learning) , 若fork或star请注明来源
 
 >* 点云数据的处理可以采用获得广泛应用的Point Cloud Library (点云库，PCL库)。
 >*  PCL库是一个最初发布于2013年的开源C++库。它实现了大量点云相关的通用算法和高效的数据管理。
@@ -75,3 +76,10 @@ make  // 生成可执行文件命令
 * https://github.com/QingyongHu/SoTA-Point-Cloud
 * https://github.com/PointCloudLibrary/pcl
 * 参考书籍：点云库PCL学习教程，朱德海，北京航空航天大学出版社
+
+
+### License
+
+Copyright (c) [双愚](https://github.com/HuangCongQing/pcl-learning). All rights reserved.
+
+Licensed under the [MIT](./LICENSE) License.
