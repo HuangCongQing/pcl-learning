@@ -4,11 +4,11 @@
  * @Company(School): UCAS
  * @Date: 2020-10-04 18:17:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-24 17:46:09
+ * @LastEditTime: 2020-10-25 13:13:59
 -->
 # pcl
 PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
-
+墙裂建议先看下：[PCL(Point Cloud Library)学习指南&资料推荐](./PCL(Point Cloud Library)学习指南&资料推荐.md )
 @[双愚](https://github.com/HuangCongQing/pcl-learning) , 若fork或star请注明来源
 
 >* 点云数据的处理可以采用获得广泛应用的Point Cloud Library (点云库，PCL库)。
@@ -77,6 +77,19 @@ make  // 生成可执行文件命令
 * https://github.com/PointCloudLibrary/pcl
 * 参考书籍：点云库PCL学习教程，朱德海，北京航空航天大学出版社
 
+**入门资料：**
+- **视频**：[bilibili-PCL点云库官网教程](https://space.bilibili.com/504859351/channel/detail?cid=130387)
+- **点云库PCL学习教程书籍每章总结：**[https://github.com/MNewBie/PCL-Notes](https://github.com/MNewBie/PCL-Notes)
+- 百度网盘资料：
+
+链接：[https://pan.baidu.com/s/1ziq8s_kj5QpM8eXO_d6RJg](https://pan.baidu.com/s/1ziq8s_kj5QpM8eXO_d6RJg)<br />提取码：g6ny<br />**代码实践资料：**
+
+- 官方各模块示例(和对应的对象函数对照着看)【英文】：[https://pcl.readthedocs.io/projects/tutorials/en/latest/#](https://pcl.readthedocs.io/projects/tutorials/en/latest/#)
+- 官方各模块对应的对象和函数【英文】：
+   - [https://pointclouds.org/documentation/modules.html](https://pointclouds.org/documentation/modules.html)
+   - [https://pointclouds.org/](https://pointclouds.org/) 点击网站中的12宫图，没一格对应一个模块的对象函数详解
+- [黑马机器人系列文档：PCL-3D点云](http://robot.czxy.com/docs/pcl/)：[http://robot.czxy.com/docs/pcl/](http://robot.czxy.com/docs/pcl/)
+- [CSDN博主系列文章PCL学习(64篇)](https://www.cnblogs.com/li-yao7758258/category/954066.html)：[https://www.cnblogs.com/li-yao7758258/category/954066.html](https://www.cnblogs.com/li-yao7758258/category/954066.html)
 
 ### License
 
