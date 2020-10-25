@@ -175,14 +175,21 @@
 - [黑马机器人系列文档：PCL-3D点云](http://robot.czxy.com/docs/pcl/)：[http://robot.czxy.com/docs/pcl/](http://robot.czxy.com/docs/pcl/)
 - [CSDN博主系列文章PCL学习(64篇)](https://www.cnblogs.com/li-yao7758258/category/954066.html)：[https://www.cnblogs.com/li-yao7758258/category/954066.html](https://www.cnblogs.com/li-yao7758258/category/954066.html)
 
-<br />
+
+
 <a name="R6FaJ"></a>
 ## 附每个模块学习链接
+
 **代码自己一定要动手敲一遍**
+
 <a name="hUbE1"></a>
 ### [02kdtree k维tree](https://github.com/HuangCongQing/pcl-learning/blob/master/02kdtree)
-官网：[https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html#kdtree](https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html#kdtree)<br />对应函数：[https://pointclouds.org/documentation/group__kdtree.html](https://pointclouds.org/documentation/group__kdtree.html)<br />
-<br />详细中文博客：[https://www.cnblogs.com/li-yao7758258/p/6437440.html](https://www.cnblogs.com/li-yao7758258/p/6437440.html)<br />[https://zhuanlan.zhihu.com/p/144991935](https://zhuanlan.zhihu.com/p/144991935)<br />
+官网：[https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html#kdtree](https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html#kdtree)
+
+对应函数：[https://pointclouds.org/documentation/group__kdtree.html](https://pointclouds.org/documentation/group__kdtree.html)<br />
+
+
+详细中文博客：[https://www.cnblogs.com/li-yao7758258/p/6437440.html](https://www.cnblogs.com/li-yao7758258/p/6437440.html)<br />[https://zhuanlan.zhihu.com/p/144991935](https://zhuanlan.zhihu.com/p/144991935)<br />
 
 <a name="zej8b"></a>
 ### [03octree 八叉树](https://github.com/HuangCongQing/pcl-learning/blob/master/03octree)
