@@ -1,7 +1,7 @@
 # PCL(Point Cloud Library)学习指南&资料推荐
 
 > **PCL开始上手其实有点容易迷惑，而且PCL文档最近（2020）改版了。里面很多文档和之前的都不一样了，我自己学习PCL时，看的是最新文档，也踩了很多坑，现在分享一下自己的学习方法和思路，希望对大家有所帮助。**
-> 先放下个人学习代码**（有详细中文注解）**：[https://github.com/HuangCongQing/pcl-learning](https://github.com/HuangCongQing/pcl-learning)
+> 先放下个人学习代码 **（有详细中文注解）**：[https://github.com/HuangCongQing/pcl-learning](https://github.com/HuangCongQing/pcl-learning)
 > 自己做了很多笔记，有时间可以整理出来，发出来！
 
 <a name="h79c1"></a>
@@ -38,7 +38,9 @@
 - [15 visualization可视化](https://github.com/HuangCongQing/pcl-learning/blob/master/15visualization%E5%8F%AF%E8%A7%86%E5%8C%96)
 - [16 keypoints关键点](https://github.com/HuangCongQing/pcl-learning/blob/master/16keypoints%E5%85%B3%E9%94%AE%E7%82%B9)
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/232596/1603547180681-75a721c2-c5e2-43a5-a862-a3a7e212db0c.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=848&originWidth=859&size=103106&status=done&style=none&width=267)<br />每个模块都有依赖关系，**依赖关系如下图（可以看出有四层），**最基本的就是最底层的commom模块。<br />**箭头对应的是依赖关系**，比如第二层的kdtree依赖于common；第四层的registration有四个箭头，分别是sample_consensus, kdtree, common, features。<br />
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/232596/1603547180681-75a721c2-c5e2-43a5-a862-a3a7e212db0c.png#align=left&display=inline&height=264&margin=%5Bobject%20Object%5D&name=image.png&originHeight=848&originWidth=859&size=103106&status=done&style=none&width=267)<br />
+
+每个模块都有依赖关系，依赖关系如下图（可以看出有四层），**最基本的就是最底层的commom模块。<br />**箭头对应的是依赖关系**，比如第二层的kdtree依赖于common；第四层的registration有四个箭头，分别是sample_consensus, kdtree, common, features。<br />
 <br />
 <br />
 <br />![](https://cdn.nlark.com/yuque/0/2020/png/232596/1601624011126-df5f9056-9dbe-4578-8f81-60b3aba76e27.png#align=left&display=inline&height=325&margin=%5Bobject%20Object%5D&originHeight=325&originWidth=1058&size=0&status=done&style=none&width=1058)<br />官方图<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/232596/1601623998745-094ccd65-245c-493f-adb8-6bcebc345ad7.png#align=left&display=inline&height=491&margin=%5Bobject%20Object%5D&name=image.png&originHeight=645&originWidth=979&size=340648&status=done&style=none&width=746)<br />[B站up主](https://space.bilibili.com/504859351/channel/detail?cid=130387)画的更详细的图<br />**
@@ -54,7 +56,11 @@
 
 
 <br />大家应该都明白，**官方文档是最好的学习资料**，但目前没有中文版，我看有些博主也翻译了一部分，现在特意整理了下！<br />
-<br />**第一步，首先，大家什么都不了解的话，强烈推荐大家看这个视频入门**：[bilibili-PCL点云库官网教程](https://space.bilibili.com/504859351/channel/detail?cid=130387)<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/232596/1603546897353-a11e3cee-3184-41c6-9186-ff9d7183c4ac.png#align=left&display=inline&height=889&margin=%5Bobject%20Object%5D&name=image.png&originHeight=889&originWidth=1313&size=564191&status=done&style=none&width=1313)<br />
+<br />
+
+**第一步，首先，大家什么都不了解的话，强烈推荐大家看这个视频入门**：
+
+[bilibili-PCL点云库官网教程](https://space.bilibili.com/504859351/channel/detail?cid=130387)<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/232596/1603546897353-a11e3cee-3184-41c6-9186-ff9d7183c4ac.png#align=left&display=inline&height=889&margin=%5Bobject%20Object%5D&name=image.png&originHeight=889&originWidth=1313&size=564191&status=done&style=none&width=1313)<br />
 <br />
 <br />
 <br />**第二步，然后，有一本中文教程大家应该知道：**<br />[**点云库PCL学习教程，朱德海，北京航空航天大学出版社**](https://book.douban.com/subject/20283456/)<br />这本书好多人吐槽，因为就是英文的官方文档翻译过来的，还有一些错误信息。<br />不过作为入门还是挺好的，**里面有附带的代码demo**（就是官网上的），下面是书籍PDF版和示例代码，有需要的可以看下。
@@ -148,8 +154,6 @@
 ## 经验和推荐资料总结
 先说下这位博主的建议，我觉得挺好的：<br />[关于如何查找和利用PCL库学习资源的一些心得](https://blog.csdn.net/shine_cherise/article/details/79285162)
 > - **博主个人推荐是把PCL官网的“API Documentation”、“Tutorial”和《点云库PCL学习教程2》结合起来用效果会比较好。**如果你需要用到某项功能，先去看原版的PCL官网的“API Documentation”、“Tutorial”获取最原汁原味的“第一感觉”，然后再去看《点云库PCL学习教程2》进行“中文亲切版收割”，其中还可以顺便收割一波“理论背景与整理”。**先啃硬骨头，然后云里笑。**
-> 
-**
 > - 看例程，需要用**哪块就直接上实例熟悉代码和库**。多调试代码，慢慢就熟悉了。每个人都得经历这个过程。
 
 
