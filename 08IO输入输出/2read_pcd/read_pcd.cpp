@@ -2,9 +2,10 @@
  * @Description: 读取pcd文件：https://www.cnblogs.com/li-yao7758258/p/6435568.html
  * @Author: HCQ
  * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
  * @Date: 2020-10-09 12:56:02
- * @LastEditors: HCQ
- * @LastEditTime: 2020-10-14 10:08:45
+ * @LastEditTime: 2020-10-27 16:27:55
+ * @FilePath: /pcl-learning/08IO输入输出/2read_pcd/read_pcd.cpp
  */
 #include <iostream>          //标准C++库中的输入输出的头文件
 #include <pcl/io/pcd_io.h>   //PCD读写类相关的头文件
