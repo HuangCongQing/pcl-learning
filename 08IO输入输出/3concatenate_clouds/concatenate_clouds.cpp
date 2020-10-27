@@ -1,10 +1,11 @@
 /*
- * @Description:  点云之间的连接：https://www.cnblogs.com/li-yao7758258/p/6435759.html
+ * @Description: 点云之间的连接：https://www.cnblogs.com/li-yao7758258/p/6435759.html
  * @Author: HCQ
  * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
  * @Date: 2020-10-09 14:20:59
- * @LastEditors: HCQ
- * @LastEditTime: 2020-10-09 16:16:25
+ * @LastEditTime: 2020-10-27 16:30:21
+ * @FilePath: /pcl-learning/08IO输入输出/3concatenate_clouds/concatenate_clouds.cpp
  */
 #include <iostream>
 #include <pcl/io/pcd_io.h>   //io模块

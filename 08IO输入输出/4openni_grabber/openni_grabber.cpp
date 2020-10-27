@@ -1,10 +1,11 @@
 /*
- * @Description: https://www.cnblogs.com/li-yao7758258/p/6435759.html
+ * @Description: 获取传感器深度  https://www.cnblogs.com/li-yao7758258/p/6435759.html
  * @Author: HCQ
  * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
  * @Date: 2020-10-09 16:34:09
- * @LastEditors: HCQ
- * @LastEditTime: 2020-10-13 10:50:30
+ * @LastEditTime: 2020-10-27 16:33:43
+ * @FilePath: /pcl-learning/08IO输入输出/4openni_grabber/openni_grabber.cpp
  */
 #include <pcl/point_cloud.h>       //点云类定义头文件
 #include <pcl/point_types.h>       //点 类型定义头文件
