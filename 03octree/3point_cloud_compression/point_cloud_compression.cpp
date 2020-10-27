@@ -1,11 +1,13 @@
 /*
- * @Description: 官网：https://pcl.readthedocs.io/projects/tutorials/en/latest/compression.html#octree-compression
+ * @Description: 官网：点云压缩  https://pcl.readthedocs.io/projects/tutorials/en/latest/compression.html#octree-compression
  * @Author: HCQ
  * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
  * @Date: 2020-10-13 11:30:59
- * @LastEditors: HCQ
- * @LastEditTime: 2020-10-13 11:33:40
+ * @LastEditTime: 2020-10-27 16:04:00
+ * @FilePath: /pcl-learning/03octree/3point_cloud_compression/point_cloud_compression.cpp
  */
+
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/io/openni_grabber.h>

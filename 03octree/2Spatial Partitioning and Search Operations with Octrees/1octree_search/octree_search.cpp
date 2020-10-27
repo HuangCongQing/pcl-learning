@@ -1,3 +1,12 @@
+/*
+ * @Description: 点云搜索  https://pcl.readthedocs.io/projects/tutorials/en/latest/octree.html#octree-search
+ * @Author: HCQ
+ * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
+ * @Date: 2020-10-13 10:54:55
+ * @LastEditTime: 2020-10-27 16:01:26
+ * @FilePath: /pcl-learning/03octree/2Spatial Partitioning and Search Operations with Octrees/1octree_search/octree_search.cpp
+ */
 #include <pcl/point_cloud.h>   //点云头文件
 #include <pcl/octree/octree.h> //八叉树头文件
 

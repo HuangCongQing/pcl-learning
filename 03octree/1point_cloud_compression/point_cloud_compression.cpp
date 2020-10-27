@@ -2,10 +2,12 @@
  * @Description: 点云压缩：https://www.cnblogs.com/li-yao7758258/p/6436117.html
  * @Author: HCQ
  * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
  * @Date: 2020-10-13 10:10:33
- * @LastEditors: HCQ
- * @LastEditTime: 2020-10-13 10:23:32
+ * @LastEditTime: 2020-10-27 16:02:18
+ * @FilePath: /pcl-learning/03octree/1point_cloud_compression/point_cloud_compression.cpp
  */
+
 
 #include <pcl/point_cloud.h>                // 点云类型
 #include <pcl/point_types.h>                //点数据类型

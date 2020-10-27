@@ -2,10 +2,13 @@
  * @Description: https://www.cnblogs.com/li-yao7758258/p/6437440.html
  * @Author: HCQ
  * @Company(School): UCAS
+ * @Email: 1756260160@qq.com
  * @Date: 2020-10-08 21:46:40
- * @LastEditors: HCQ
- * @LastEditTime: 2020-10-10 18:59:26
+ * @LastEditTime: 2020-10-27 16:03:16
+ * @FilePath: /pcl-learning/02kdtree/1kdtree_search/kdtree_search.cpp
  */
+
+
 #include <pcl/point_cloud.h>        //点类型定义头文件
 #include <pcl/kdtree/kdtree_flann.h> //kdtree类定义头文件
 
@@ -135,4 +138,5 @@ main (int argc, char** argv)
 //     471.023 434.838 140.425 (squared distance: 35367.6)
 //     204.779 353.992 361.033 (squared distance: 37008.4)
 //     219.731 482.102 272.668 (squared distance: 37024.6)
+
 
