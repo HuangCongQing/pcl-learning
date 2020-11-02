@@ -3,8 +3,8 @@
  * @Author: HCQ
  * @Company(School): UCAS
  * @Date: 2020-10-12 09:59:01
- * @LastEditors: HCQ
- * @LastEditTime: 2020-10-14 11:05:30
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-02 22:05:15
  */
 #include <pcl/visualization/cloud_viewer.h> //类cloud_viewer头文件申明
 #include <iostream>                         //标准输入输出头文件申明
@@ -48,7 +48,7 @@ int main()
 {
     // 创建点云渲染对象，导入待渲染文件
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGBA>); //声明cloud
-    pcl::io::loadPCDFile("room_scan1.pcd", *cloud);                                        //加载点云文件
+    pcl::io::loadPCDFile("../room_scan1.pcd", *cloud);                                        //加载点云文件
 
     //创建点云渲染句柄
     pcl::visualization::CloudViewer viewer("Cloud Viewer"); //创建viewer对象
