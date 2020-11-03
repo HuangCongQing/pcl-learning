@@ -9,7 +9,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-20 15:50:44
- * @LastEditTime: 2020-11-03 11:39:42
+ * @LastEditTime: 2020-11-03 11:41:25
  * @FilePath: /pcl-learning/09filters滤波/6用ConditionalRemoval或RadiusOutlinerRemoval移除离群点/remove_outliers.cpp
  */
 #include <iostream>
@@ -69,6 +69,10 @@ int main(int argc, char **argv)
     condrem.setCondition(range_cond);
     condrem.setInputCloud(cloud);   //输入点云
     condrem.setKeepOrganized(true); //设置保持点云的结构
+                                    // 设置是否保留滤波后删除的点，以保持点云的有序性，通过setuserFilterValue设置的值填充点云；或从点云中删除滤波后的点，从而改变其组织结构
+                                    // 如果设置为true且不设置setUserFilterValue的值，则用nan填充点云
+                                    //  https://blog.csdn.net/qq_37124765/article/details/82262863
+
     // 执行滤波
     condrem.filter(*cloud_filtered); //大于0.0小于0.8这两个条件用于建立滤波器
   }
