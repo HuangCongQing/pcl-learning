@@ -4,12 +4,12 @@
  * @Company(School): UCAS
  * @Date: 2020-10-04 18:17:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-10-25 13:20:38
+ * @LastEditTime: 2020-12-07 10:27:12
 -->
 # pcl
 PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
-墙裂建议先看下：[PCL(Point Cloud Library)学习指南&资料推荐](./PCL学习指南&资料推荐.md)
+**墙裂建议先看下：[PCL(Point Cloud Library)学习指南&资料推荐](https://www.yuque.com/huangzhongqing/pcl/rdk5k8)**
 
 @[双愚](https://github.com/HuangCongQing/pcl-learning) , 若fork或star请注明来源
 
