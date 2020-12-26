@@ -11,6 +11,8 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 **墙裂建议先看下：[PCL(Point Cloud Library)学习指南&资料推荐](https://www.yuque.com/huangzhongqing/pcl/rdk5k8)**
 
+**个人笔记：[PCL(Point Cloud Library)学习记录（2020）](https://www.yuque.com/huangzhongqing/pcl)**
+
 @[双愚](https://github.com/HuangCongQing/pcl-learning) , 若fork或star请注明来源
 
 >* 点云数据的处理可以采用获得广泛应用的Point Cloud Library (点云库，PCL库)。
@@ -25,7 +27,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 
 
-* **个人笔记：https://www.yuque.com/huangzhongqing/pcl**
+
 
 Tips:
 * ubuntu下使用PCL，需要写CMakeLists.txt文件，然后编译才可以生成可执行文件.
