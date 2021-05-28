@@ -19,6 +19,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 * 3D-MOT(多目标检测和追踪):
   [https://github.com/HuangCongQing/3D-LIDAR-Multi-Object-Tracking/tree/kitti](https://github.com/HuangCongQing/3D-LIDAR-Multi-Object-Tracking/tree/kitti)
+    * 需要学习ROS：https://github.com/HuangCongQing/ROS
 
 @[双愚](https://github.com/HuangCongQing/pcl-learning) , 若fork或star请注明来源
 
@@ -99,6 +100,7 @@ make  // 生成可执行文件命令
 * https://github.com/QingyongHu/SoTA-Point-Cloud
 * https://github.com/PointCloudLibrary/pcl
 * 参考书籍：点云库PCL学习教程，朱德海，北京航空航天大学出版社
+* Plus：ROS学习-https://github.com/HuangCongQing/ROS
 
 **入门资料：**
 
