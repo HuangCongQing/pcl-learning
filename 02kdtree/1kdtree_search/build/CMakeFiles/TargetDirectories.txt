@@ -1,3 +1,0 @@
-/home/hcq/pcl/pcl-learning/02kdtree/1kdtree_search/build/CMakeFiles/rebuild_cache.dir
-/home/hcq/pcl/pcl-learning/02kdtree/1kdtree_search/build/CMakeFiles/kdtree_search.dir
-/home/hcq/pcl/pcl-learning/02kdtree/1kdtree_search/build/CMakeFiles/edit_cache.dir
