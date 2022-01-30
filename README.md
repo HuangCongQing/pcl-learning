@@ -12,6 +12,7 @@
 PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 **墙裂建议先看下：[PCL(Point Cloud Library)学习指南&资料推荐](https://zhuanlan.zhihu.com/p/268524083)**
+**PCL学习入门指南&代码实践(最新版)入门视频：https://www.bilibili.com/video/BV1HS4y1y7AB**
 
 **个人笔记：[PCL(Point Cloud Library)学习记录（2021）](https://www.yuque.com/huangzhongqing/pcl)**
 
