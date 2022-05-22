@@ -18,7 +18,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 **新建了一个PCL微信交流群，扫码下图可以加入下（若无法加群，请关注公众号【双愚】后台回复PCL加群）**
 
-![image](https://user-images.githubusercontent.com/20675770/168442527-eec1f887-0ba5-4ff0-85a0-802796e9941e.png)
+![image](https://user-images.githubusercontent.com/20675770/169702111-60e1ffd8-512c-4ae2-9a0f-b7451642084e.png)
 
 **相关项目实战:**
 
