@@ -58,20 +58,20 @@ a graph of code libraries
 
 ##### step2
 
-* [02kdtree k维tree](02kdtree)
-* [03octree 八叉树](03octree)
-* [04search](04search)
+* [* 02kdtree k维tree](02kdtree)
+* [* 03octree 八叉树](03octree)
+* [* 04search](04search)
 * [05sample consensus  抽样一致性模块](05sampleconsensus抽样一致性模块)
 * [06range-images深度图像](06range-images深度图像)
 * [07 ...]()
 
 ##### step3
 
-* [08 io 输入输出](08IO输入输出)
-* [09 filters 滤波](09filters滤波)
-* [10 features 特征](10features特征)
+* [* 08 io 输入输出](08IO输入输出)
+* [* 09 filters 滤波](09filters滤波)
+* [* 10 features 特征](10features特征)
 
-##### step4
+##### step4（根据个人需要）
 
 * [11 surface表面 ](11surface表面 )
 * [12 segmentation分割](12segmentation分割)
