@@ -133,7 +133,7 @@ If you find this project useful in your research, please consider cite:
 ```
 @misc{pcl-learning2020,
     title={A Complete Study Guide on How to Learn PCL (Point Cloud Library).},
-    author={Huang, Chongqing},
+    author={Chongqing, Huang},
     howpublished = {\url{https://github.com/HuangCongQing/pcl-learning}},
     year={2020}
 }
