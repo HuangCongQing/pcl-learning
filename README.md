@@ -126,6 +126,21 @@ make  // 生成可执行文件命令
 - [黑马机器人系列文档：PCL-3D点云](http://robot.czxy.com/docs/pcl/)：[http://robot.czxy.com/docs/pcl/](http://robot.czxy.com/docs/pcl/)
 - [CSDN博主系列文章PCL学习(64篇)](https://www.cnblogs.com/li-yao7758258/category/954066.html)：[https://www.cnblogs.com/li-yao7758258/category/954066.html](https://www.cnblogs.com/li-yao7758258/category/954066.html)
 
+## Citation 
+If you find this project useful in your research, please consider cite:
+
+
+```
+@misc{pcl-learning2020,
+    title={A Complete Study Guide on How to Learn PCL (Point Cloud Library).},
+    author={Huang, Chongqing},
+    howpublished = {\url{https://github.com/HuangCongQing/pcl-learning}},
+    year={2020}
+}
+```
+
+
+
 微信公众号：**【双愚】**（huang_chongqing） 聊科研技术,谈人生思考,欢迎关注~
 
 ![image](https://user-images.githubusercontent.com/20675770/169835565-08fc9a49-573e-478a-84fc-d9b7c5fa27ff.png)
