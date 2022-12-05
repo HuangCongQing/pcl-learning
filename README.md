@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-04 18:17:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-12-05 23:32:09
+ * @LastEditTime: 2022-12-05 23:34:32
 -->
 # pcl
 
@@ -110,7 +110,7 @@ make  // 生成可执行文件命令
 * Plus：ROS学习-https://github.com/HuangCongQing/ROS
 
 **入门资料：**
-
+- **<font color='red'>PCL学习入门指南&代码实践(最新版)入门视频： </font> https://www.bilibili.com/video/BV1HS4y1y7AB**
 - **视频**：[bilibili-PCL点云库官网教程](https://space.bilibili.com/504859351/channel/detail?cid=130387)
 - **点云库PCL学习教程书籍每章总结：**[https://github.com/MNewBie/PCL-Notes](https://github.com/MNewBie/PCL-Notes)
 - 百度网盘资料：
