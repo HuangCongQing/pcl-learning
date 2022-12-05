@@ -96,9 +96,9 @@ main (int argc, char** argv)
                                                                point_cloud.sensor_origin_[1],
                                                                point_cloud.sensor_origin_[2])) *
                         Eigen::Affine3f (point_cloud.sensor_orientation_);
-    std::string far_ranges_filename = pcl::getFilenameWithoutExtension (filename)+"_far_ranges.pcd";
-    if (pcl::io::loadPCDFile (far_ranges_filename.c_str (), far_ranges) == -1)
-      std::cout << "Far ranges file \""<<far_ranges_filename<<"\" does not exists.\n";
+    // std::string far_ranges_filename = pcl::getFilenameWithoutExtension (filename)+"_far_ranges.pcd";
+    // if (pcl::io::loadPCDFile (far_ranges_filename.c_str (), far_ranges) == -1)
+    //   std::cout << "Far ranges file \""<<far_ranges_filename<<"\" does not exists.\n";
   }
   else
   {

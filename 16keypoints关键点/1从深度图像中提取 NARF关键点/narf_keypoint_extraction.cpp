@@ -6,7 +6,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-21 16:54:11
- * @LastEditTime: 2020-10-21 17:26:45
+ * @LastEditTime: 2022-12-05 23:13:11
  * @FilePath: /pcl-learning/16keypoints关键点/1从深度图像中提取 NARF关键点/narf_keypoint_extraction.cpp
  */
 #include <iostream>
@@ -114,9 +114,9 @@ int main(int argc, char **argv)
                                                                  point_cloud.sensor_origin_[1],
                                                                  point_cloud.sensor_origin_[2])) *
                             Eigen::Affine3f(point_cloud.sensor_orientation_);
-        std::string far_ranges_filename = pcl::getFilenameWithoutExtension(filename) + "_far_ranges.pcd";
-        if (pcl::io::loadPCDFile(far_ranges_filename.c_str(), far_ranges) == -1)
-            std::cout << "Far ranges file \"" << far_ranges_filename << "\" does not exists.\n";
+        // std::string far_ranges_filename = pcl::getFilenameWithoutExtension(filename) + "_far_ranges.pcd";
+        // if (pcl::io::loadPCDFile(far_ranges_filename.c_str(), far_ranges) == -1)
+        //     std::cout << "Far ranges file \"" << far_ranges_filename << "\" does not exists.\n";
     }
     else
     {
