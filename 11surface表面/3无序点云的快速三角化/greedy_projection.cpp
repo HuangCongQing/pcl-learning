@@ -4,16 +4,16 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-22 10:35:16
- * @LastEditTime: 2020-10-22 10:50:31
- * @FilePath: /pcl-learning/11surface表面 /3无序点云的快速三角化/greedy_projection.cpp
+ * @LastEditTime: 2022-12-05 23:18:56
+ * @FilePath: /pcl-learning/11surface表面/3无序点云的快速三角化/greedy_projection.cpp
  */
 #include <pcl/point_types.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/kdtree/kdtree_flann.h>
 #include <pcl/features/normal_3d.h>
 #include <pcl/surface/gp3.h>      //贪婪投影三角化算法
-int
-main (int argc, char** argv)
+
+int main (int argc, char** argv)
 {
   // 将一个XYZ点类型的PCD文件打开并存储到对象中
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
@@ -68,5 +68,5 @@ main (int argc, char** argv)
 
 
   // Finish
-  return (0);
+  return 0;
 }
