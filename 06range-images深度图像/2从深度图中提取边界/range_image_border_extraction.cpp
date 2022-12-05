@@ -6,7 +6,7 @@ https://www.cnblogs.com/li-yao7758258/p/6476046.html
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-21 15:57:52
- * @LastEditTime: 2020-10-21 16:18:14
+ * @LastEditTime: 2022-12-05 23:06:43
  * @FilePath: /pcl-learning/06range-images深度图像/2从深度图中提取边界/range_image_border_extraction.cpp
  */
 #include <iostream>
@@ -95,9 +95,9 @@ main (int argc, char** argv)
                                                                point_cloud.sensor_origin_[2])) *
                         Eigen::Affine3f (point_cloud.sensor_orientation_);  //仿射变换矩阵
   
-    std::string far_ranges_filename = pcl::getFilenameWithoutExtension (filename)+"_far_ranges.pcd"; // 文件
-    if (pcl::io::loadPCDFile(far_ranges_filename.c_str(), far_ranges) == -1)
-      std::cout << "Far ranges file \""<<far_ranges_filename<<"\" does not exists.\n";
+    // std::string far_ranges_filename = pcl::getFilenameWithoutExtension (filename)+"_far_ranges.pcd"; // 文件
+    // if (pcl::io::loadPCDFile(far_ranges_filename.c_str(), far_ranges) == -1)
+    //   std::cout << "Far ranges file \""<<far_ranges_filename<<"\" does not exists.\n";
   }
   else
   {
