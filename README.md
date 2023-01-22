@@ -7,6 +7,13 @@
  * @LastEditTime: 2022-12-05 23:41:31
 -->
 # pcl
+![](https://img.shields.io/badge/pcl-learning-v0.1-brightgreen)
+![](https://img.shields.io/badge/python->=v3.0-blue)
+![](https://img.shields.io/badge/pcl->=v1.9-red)
+
+[![GitHub stars](https://img.shields.io/github/stars/HuangCongQing/pcl-learning.svg?style=social&label=Stars)](https://github.com/murufeng/awesome_lightweight_networks)
+[![GitHub forks](https://img.shields.io/github/forks/HuangCongQing/pcl-learning.svg?style=social&label=Forks)](https://github.com/murufeng/awesome_lightweight_networks)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=HuangCongQing/pcl-learning) 
 
 PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
@@ -14,7 +21,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 **<font color='red'>PCL学习入门指南&代码实践(最新版)入门视频： </font> https://www.bilibili.com/video/BV1HS4y1y7AB**
 
-**代码对应系列笔记：[PCL(Point Cloud Library)学习记录（2022）](https://www.yuque.com/huangzhongqing/pcl)**
+**代码对应系列笔记：[PCL(Point Cloud Library)学习记录（2023）](https://www.yuque.com/huangzhongqing/pcl)**
 
 **新建了一个PCL微信交流群，扫码下图可以加入下（若无法加群，请关注公众号【双愚】后台回复PCL加群）**
 
