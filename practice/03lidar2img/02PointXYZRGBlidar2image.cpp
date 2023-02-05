@@ -119,9 +119,9 @@ void use_pcdTopicture_main(pcl::PointCloud< pcl::PointXYZRGB>::Ptr cloud, float 
 int main(int argc,char **argv)
 {
     
-    pcl::PointCloud<pointcolor>::Ptr input (new pcl::PointCloud<pointcolor>);
-    // pcl::io::loadPCDFile(argv[1],*input);
-    pcl::io::loadPCDFile("/home/hcq/data/01project/wire_dataset/20221221new_file.pcd",*cloud);
+    pcl::PointCloud<pointcolor>::Ptr cloud (new pcl::PointCloud<pointcolor>);
+    pcl::io::loadPCDFile(argv[1],*cloud);
+    // pcl::io::loadPCDFile("/home/hcq/data/01project/wire_dataset/20221221new_file.pcd",*cloud);
 
 
 
