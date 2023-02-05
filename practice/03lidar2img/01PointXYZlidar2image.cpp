@@ -1,3 +1,9 @@
+/* 
+
+ ./01PointXYZlidar2image  /home/hcq/data/01project/wire_dataset/20230112camera_lidar_南京现场采集/20230112/51410110E0C24609B50084B5D8ACA393.pcd
+*/
+
+
 #include <iostream>
 #include <pcl/filters/passthrough.h>
 #include <pcl/point_cloud.h>
@@ -25,7 +31,8 @@ int main(int argc, char** argv)
 {
 	 pcl::PointCloud<pcl::PointXYZ> pointcloud;
 	//读入点云
-	if (pcl::io::loadPCDFile("/home/hcq/data/01project/wire_dataset/20221221new_file.pcd", pointcloud) < 0)
+	// if (pcl::io::loadPCDFile("/home/hcq/data/01project/wire_dataset/20221221new_file.pcd", pointcloud) < 0)
+	if (pcl::io::loadPCDFile(argv[1], pointcloud) < 0)
 	{
 		PCL_ERROR("目标文件不存在！\n");
 		return -1;
