@@ -69,9 +69,8 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 * [* 04search(TODO)](04search):
 * [05sample consensus  抽样一致性模块](05sampleconsensus抽样一致性模块)
 * [06range-images深度图像](06range-images深度图像)
-* [07tracking跟踪](07tracking跟踪/tracking.md)
 
-##### step3
+##### step3（must）
 
 * [* 08 io 输入输出](08IO输入输出)
 * [* 09 filters 滤波](09filters滤波)
@@ -85,7 +84,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 * [14 registration配准](14registration配准)
 * [15 visualization可视化](15visualization可视化)
 * [16 keypoints关键点](16keypoints关键点)
-* [17tracking](17tracking )
+* [07tracking跟踪](07tracking跟踪/tracking.md)
 
 ## 编译过程
 
