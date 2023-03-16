@@ -8,7 +8,6 @@
 -->
 # pcl
 ![](https://img.shields.io/badge/pcl-learning-v0.1-brightgreen)
-![](https://img.shields.io/badge/python->=v3.0-blue)
 ![](https://img.shields.io/badge/pcl->=v1.9-red)
 
 [![GitHub stars](https://img.shields.io/github/stars/HuangCongQing/pcl-learning.svg?style=social&label=Stars)](https://github.com/murufeng/awesome_lightweight_networks)
@@ -23,7 +22,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 **代码对应系列笔记：[PCL(Point Cloud Library)学习记录（2023）](https://www.yuque.com/huangzhongqing/pcl)**
 
-**新建了一个PCL微信交流群，扫码下图可以加入下（若无法加群，请关注公众号【双愚】后台回复PCL加群）**
+**PCL微信交流群二维码每周都更新一次，请关注公众号【双愚】后台回复PCL加群**
 
 
 ![image](https://user-images.githubusercontent.com/20675770/174856411-ca460d1a-d748-4b51-b8b5-b6259394ec0a.png)
