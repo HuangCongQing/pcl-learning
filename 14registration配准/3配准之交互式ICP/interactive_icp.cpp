@@ -4,10 +4,11 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2020-10-22 18:45:48
- * @LastEditTime: 2020-10-22 18:46:52
+ * @LastEditTime: 2023-06-19 23:32:30
  * @FilePath: /pcl-learning/14registration配准/3配准之交互式ICP/interactive_icp.cpp
  */
 
+// 运行命令: ./interactive_icp  ../monkey.ply  10
 
 //
 // Created by ty on 20-5-29.
