@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-04 18:17:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-12-05 23:41:31
+ * @LastEditTime: 2023-06-19 23:44:40
 -->
 # pcl
 ![](https://img.shields.io/badge/pcl-learning-v0.1-brightgreen)
@@ -67,27 +67,27 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 ##### step2
 
-* [* 02kdtree k维tree](02kdtree)
-* [* 03octree 八叉树](03octree)
-* [* 04search(TODO)](04search):
-* [05sample consensus  抽样一致性模块](05sampleconsensus抽样一致性模块)
-* [06range-images深度图像](06range-images深度图像)
+* [* 02kdtree k维tree](02kdtree)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/uffamg#w9i1y)
+* [* 03octree 八叉树](03octree)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/habl9h)
+* [* 04search(TODO)](04search):  [[doc]](https://www.yuque.com/huangzhongqing/pcl/qs4wx2)
+* [05sample consensus  抽样一致性模块](05sampleconsensus抽样一致性模块)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/ivtxgx)
+* [06range-images深度图像](06range-images深度图像)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/hxeyrz)
 
 ##### step3（must）
 
-* [* 08 io 输入输出](08IO输入输出)
-* [* 09 filters 滤波](09filters滤波)
-* [* 10 features 特征](10features特征)
+* [* 08 io 输入输出](08IO输入输出)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/mt2yo5)
+* [* 09 filters 滤波](09filters滤波)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/ai96k5)
+* [* 10 features 特征](10features特征)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/kf9kmf)
 
 ##### step4（根据个人需要）
 
-* [11 surface表面 ](11surface表面 )
-* [12 segmentation分割](12segmentation分割)
-* [13 recognition识别](13recognition识别)
-* [14 registration配准](14registration配准)
-* [15 visualization可视化](15visualization可视化)
-* [16 keypoints关键点](16keypoints关键点)
-* [07tracking跟踪](07tracking跟踪/tracking.md)
+* [11 surface表面 ](11surface表面)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/yfrd0w)
+* [12 segmentation分割](12segmentation分割)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/kg7wvi)
+* [13 recognition识别](13recognition识别)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/hpgc39)
+* [14 registration配准](14registration配准)  [[doc]](https://www.yuque.com/huangzhongqing/pcl/zg7alz)   [[doc]]()
+* [15 visualization可视化](15visualization可视化)   [[doc]](https://www.yuque.com/huangzhongqing/pcl/rmexll)
+* [16 keypoints关键点](16keypoints关键点)   [[doc]](https://www.yuque.com/huangzhongqing/pcl/twi0mt)
+* [07tracking跟踪](07tracking跟踪/tracking.md)   [[doc]](https://www.yuque.com/huangzhongqing/pcl/em72xa)
 
 ## 编译过程
 
