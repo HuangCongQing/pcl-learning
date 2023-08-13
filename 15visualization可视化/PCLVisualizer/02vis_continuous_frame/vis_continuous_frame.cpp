@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2023-08-13 11:46:58
- * @LastEditTime: 2023-08-13 13:15:37
+ * @LastEditTime: 2023-08-13 17:32:39
  * @FilePath: /pcl-learning/15visualization可视化/PCLVisualizer/02vis_continuous_frame/vis_continuous_frame.cpp
  */
 #include <iostream>
@@ -18,7 +18,12 @@ int main()
     // 创建PCLVisualizer对象
     pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("PointCloud Viewer"));
 
-    // 循环读取和可视化多帧点云
+    // 1 处理文件
+    
+    // PCD/PLY 文件夹路径
+    std::string pc_dir = "/home/hcq/project/board检测/ws_board/src/board_detection/testdata/calibra_2023-07-06-15-05-08";
+
+    // 2 循环读取和可视化多帧点云
     for (int frame = 0; frame < num_frames; frame++)
     {
         // 创建点云对象
