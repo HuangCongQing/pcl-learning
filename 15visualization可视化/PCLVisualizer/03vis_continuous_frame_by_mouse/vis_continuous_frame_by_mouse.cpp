@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2023-08-13 11:46:58
- * @LastEditTime: 2023-08-13 20:59:49
+ * @LastEditTime: 2023-08-14 15:08:50
  * @FilePath: /pcl-learning/15visualization可视化/PCLVisualizer/03vis_continuous_frame_by_mouse/vis_continuous_frame_by_mouse.cpp
  */
 #include <iostream>
@@ -14,9 +14,10 @@
 #include <boost/thread/thread.hpp>
 #include <boost/chrono.hpp>
 
-
+bool is_initial = false;
 constexpr char kPauseKey[] = "s"; // keyboard_ ="s" 就暂停播放，按到其他键就继续播放
-std::string keyboard_ = "";
+constexpr char kModeTextId[] = "1"; // 暂停还是继续
+std::string keyboard_ = "";  // 初始化
 
 
 void keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event, void* param)
@@ -28,12 +29,25 @@ void keyboardEventOccurred(const pcl::visualization::KeyboardEvent& event, void*
 }
 
 int main()
-{
-    // 创建PCLVisualizer对象(初始化)
-    pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("PointCloud Viewer"));
+{   
+    if(!is_initial){
+        // 创建PCLVisualizer对象(初始化)
+        // pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("PointCloud Viewer"));
+        // 优化（智能指针）
+        viewer = std::make_unique<pcl::visualization::PCLVisualizer>(("PointCloud Viewer"));
+        
+        // 设置可视化窗口背景颜色为黑色
+        viewer->setBackgroundColor(0.0, 0.0, 0.0);
 
-    // 注册键盘事件回调函数
-    viewer->registerKeyboardCallback(keyboardEventOccurred, static_cast<void*>(&keyboard_));
+        viewer->addCoordinateSystem(1.0);
+        // 注册键盘事件回调函数
+        viewer->registerKeyboardCallback(keyboardEventOccurred, static_cast<void*>(&keyboard_));
+        viewer->addText("Running", /*xpos=*/30, /*ypos=*/120,
+                        /*fontsize=*/20, /*r=*/1.0, /*g=*/1.0, /*b=*/1.0,
+                        kModeTextId);
+        is_initial = true;
+
+    }
     
     // 1 处理文件==================================================
     // PCD/PLY 文件夹路径
@@ -84,32 +98,37 @@ int main()
         pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(cloud, 255, 0, 0);
 
         // 添加当前帧点云数据到可视化窗口，并设置唯一的标识符
-        viewer->addPointCloud<pcl::PointXYZ>(cloud, single_color, file.string());
+        viewer->addPointCloud<pcl::PointXYZ>(cloud, single_color, "vis_point");
 
         // 设置点云渲染大小
-        viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, file.string());
-
-        // 设置可视化窗口背景颜色为黑色
-        viewer->setBackgroundColor(0.0, 0.0, 0.0);
+        viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "vis_point_size");
         
         // 更新文本显示状态
-        std::string status_text = keyboard_ != kPauseKey ? "Visualization Status: Running" : "Visualization Status: Paused";
-        viewer->addText(status_text, 20, 60, file.string());
-        viewer->updateText(status_text, 20, 60, file.string()); //TODO: 更新文字失败
+        // std::string status_text = keyboard_ != kPauseKey ? "Running" : "Paused";
+        // viewer->addText(status_text, 20, 60, file.string());
+        // viewer->updateText(status_text, 20, 60, file.string()); //TODO: 更新文字失败
+        viewer->updateText("Running",
+                            /*xpos=*/30, /*ypos=*/120,
+                            /*fontsize=*/20, /*r=*/1.0, /*g=*/1.0, /*b=*/1.0,
+                            kModeTextId);
         
         // 默认暂停300ms
         viewer->spinOnce(300);  // 调用内部渲染函数一次，重新渲染输出时间最大不超过time,单位ms 每帧间隔300ms
-        boost::this_thread::sleep_for(boost::chrono::milliseconds(300)); // 等待300ms
         // 每帧可视化后等待按键事件(修改continue_visualization的值)，以及每帧间隔300ms// 每帧可视化后等待按键事件(keyboard_ ="s" 就暂停播放，按到其他键就继续播放)，以及每帧间隔300ms
         while (keyboard_ == kPauseKey)
         {
+            viewer->updateText("Paused",
+                                /*xpos=*/30, /*ypos=*/120,
+                                /*fontsize=*/20, /*r=*/1.0, /*g=*/0.0, /*b=*/0.0,
+                                kModeTextId);
             viewer->spinOnce(300);  // 每帧间隔300ms
             boost::this_thread::sleep_for(boost::chrono::milliseconds(300)); // 等待300ms
         }
         // 删除之前的文本信息
-        viewer->removeShape(file.string());
+        viewer->removeShape(kModeTextId);
         // 删除点云
-        viewer->removePointCloud(file.string());// 可视化结束后清除点云数据
+        viewer->removeAllPointClouds();
+        // viewer->removePointCloud("vis_point");// 可视化结束后清除点云数据
     }
 
     return 0;
