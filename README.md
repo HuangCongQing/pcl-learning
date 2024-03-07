@@ -27,7 +27,8 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 **PCL微信交流群二维码每周都更新一次，请关注公众号【双愚】后台回复PCL加群**
 * 更多自动驾驶相关交流群，欢迎扫码加入：[自动驾驶感知(PCL/ROS+DL)：技术交流群汇总(新版)](https://mp.weixin.qq.com/s?__biz=MzI4OTY1MjA3Mg==&mid=2247486575&idx=1&sn=3145b7a5e9dda45595e1b51aa7e45171&chksm=ec2aa068db5d297efec6ba982d6a73d2170ef09a01130b7f44819b01de46b30f13644347dbf2#rd)
 
-![2852630f4cf91da04dccf36c227aac7](https://github.com/HuangCongQing/pcl-learning/assets/20675770/f55c8b20-d7ec-43df-9f53-4271a0dcab12)
+
+<img src="https://github.com/HuangCongQing/pcl-learning/assets/20675770/f55c8b20-d7ec-43df-9f53-4271a0dcab12" alt="微信交流群二维码" width="50%;" height="50%" />
 
 
 **相关项目实战:**
@@ -150,7 +151,7 @@ If you find this project useful in your research, please consider cite:
 
 微信公众号：**【双愚】**（huang_chongqing） 聊科研技术,谈人生思考,欢迎关注~
 
-![image](https://user-images.githubusercontent.com/20675770/169835565-08fc9a49-573e-478a-84fc-d9b7c5fa27ff.png)
+<img src="https://user-images.githubusercontent.com/20675770/169835565-08fc9a49-573e-478a-84fc-d9b7c5fa27ff.png" alt="" width="50%;" height="50%" />
 
 **往期推荐：**
 1. [本文不提供职业建议，却能助你一生](https://mp.weixin.qq.com/s/rBR62qoAEeT56gGYTA0law)
@@ -163,13 +164,19 @@ Copyright (c) [双愚](https://github.com/HuangCongQing/pcl-learning). All righ
 
 Licensed under the [MIT](./LICENSE) License.
 
+### 欢迎交流
+后续会根据逐步完善，欢迎大家提出宝贵意见，也欢迎大家提issue pr，还有star⭐️。
 
-PLus: 创建了一个知识星球 **【自动驾驶感知(PCL/ROS+DL)】** 专注于自动驾驶感知领域，包括传统方法(PCL点云库,ROS)和深度学习（目标检测+语义分割）方法。同时涉及Apollo，Autoware(基于ros2)，BEV感知，三维重建，SLAM(视觉+激光雷达) ，模型压缩（蒸馏+剪枝+量化等），自动驾驶模拟仿真，自动驾驶数据集标注&数据闭环等自动驾驶全栈技术，欢迎扫码二维码加入，一起登顶自动驾驶的高峰！
-![image](https://github.com/HuangCongQing/HuangCongQing/assets/20675770/304e0c4d-89d2-4cee-a2a9-3c690611c9d9)
+可以领取优惠加入星球使劲向我提问哈~
+
+<img src="https://github.com/HuangCongQing/pcl-learning/assets/20675770/67965967-ee81-4e11-b05a-c82656d0d6d7" alt="" width="50%;" height="50%" />
+<img src="https://github.com/HuangCongQing/HuangCongQing/assets/20675770/304e0c4d-89d2-4cee-a2a9-3c690611c9d9" alt="" width="50%;" height="50%" />
+
+> PLus: 创建了一个知识星球 **【自动驾驶感知(PCL/ROS+DL)】** 专注于自动驾驶感知领域，包括传统方法(PCL点云库,ROS)和深度学习（目标检测+语义分割）方法。同时涉及Apollo，Autoware(基于ros2)，BEV感知，三维重建，SLAM(视觉+激光雷达) ，模型压缩（蒸馏+剪枝+量化等），自动驾驶模拟仿真，自动驾驶数据集标注&数据闭环等自动驾驶全栈技术，欢迎扫码二维码加入，一起登顶自动驾驶的高峰！
+
 
 
 **最后，如果您想要支持我的工作，请扫描下面的二维码**
 
-![image](https://user-images.githubusercontent.com/20675770/174442478-705129f7-ca4d-4e89-9b21-7e1b84817940.png)
-
+<img src="https://user-images.githubusercontent.com/20675770/174442478-705129f7-ca4d-4e89-9b21-7e1b84817940.png" alt="" width="50%;" height="50%" />
 
