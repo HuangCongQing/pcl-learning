@@ -95,7 +95,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 mkdir build
 cd build
 cmake .. // 对上一级进行编译
-make  // 生成可执行文件命令
+make  // 生成可执行文件
 ./executedemo  // 运行可执行文件
 ```
 
