@@ -18,6 +18,9 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 * 如有疑问，微信：shuangyu_ai
 
 
+* [**【本仓库测试pcd数据】**](./data)
+
+
 **墙裂建议先看下：[PCL(Point Cloud Library)学习指南&资料推荐](https://zhuanlan.zhihu.com/p/268524083)**
 
 **<font color='red'>PCL学习入门指南&代码实践(最新版)入门视频： </font> https://www.bilibili.com/video/BV1HS4y1y7AB**
@@ -59,7 +62,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 > ***建议必学**
 
-* [【本仓库测试pcd数据】](./data)
+* [**【本仓库测试pcd数据】**](./data)
 
 * [00base](00base)
 
