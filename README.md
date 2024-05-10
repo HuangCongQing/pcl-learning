@@ -15,8 +15,10 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=HuangCongQing/pcl-learning) 
 
 PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
-* 如有疑问，微信：shuangyu_ai
-
+* 如有疑问，微信：shuangyu_ai 
+  * **Plus: <u>可承接点云处理相关项目，欢迎私聊</u>**
+  * **PCL微信交流群二维码每周都更新一次，请关注公众号【双愚】后台回复PCL加群**
+  * 更多自动驾驶相关交流群，欢迎扫码加入：[自动驾驶感知(PCL/ROS+DL)：技术交流群汇总(新版)](https://mp.weixin.qq.com/s?__biz=MzI4OTY1MjA3Mg==&mid=2247486575&idx=1&sn=3145b7a5e9dda45595e1b51aa7e45171&chksm=ec2aa068db5d297efec6ba982d6a73d2170ef09a01130b7f44819b01de46b30f13644347dbf2#rd) 
 
 * [**【本仓库测试pcd数据】**](./data)
 
@@ -26,9 +28,6 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 **<font color='red'>PCL学习入门指南&代码实践(最新版)入门视频： </font> https://www.bilibili.com/video/BV1HS4y1y7AB**
 
 **代码对应系列笔记：[PCL(Point Cloud Library)学习记录（2023）](https://www.yuque.com/huangzhongqing/pcl)**
-
-**PCL微信交流群二维码每周都更新一次，请关注公众号【双愚】后台回复PCL加群**
-* 更多自动驾驶相关交流群，欢迎扫码加入：[自动驾驶感知(PCL/ROS+DL)：技术交流群汇总(新版)](https://mp.weixin.qq.com/s?__biz=MzI4OTY1MjA3Mg==&mid=2247486575&idx=1&sn=3145b7a5e9dda45595e1b51aa7e45171&chksm=ec2aa068db5d297efec6ba982d6a73d2170ef09a01130b7f44819b01de46b30f13644347dbf2#rd)
 
 
 <img src="https://github.com/HuangCongQing/pcl-learning/assets/20675770/f55c8b20-d7ec-43df-9f53-4271a0dcab12" alt="微信交流群二维码" width="50%;" height="50%" />
