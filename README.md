@@ -27,7 +27,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 **<font color='red'>PCL学习入门指南&代码实践(最新版)入门视频： </font> https://www.bilibili.com/video/BV1HS4y1y7AB**
 
-**代码对应系列笔记：[PCL(Point Cloud Library)学习记录（2024）](https://www.yuque.com/huangzhongqing/pcl)**
+**代码对应系列笔记：[PCL(Point Cloud Library)学习记录（最新）](https://www.yuque.com/huangzhongqing/pcl)**
 
 
 <img src="https://github.com/HuangCongQing/pcl-learning/assets/20675770/f55c8b20-d7ec-43df-9f53-4271a0dcab12" alt="微信交流群二维码" width="50%;" height="50%" />
