@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Date: 2020-10-04 18:17:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-08-13 12:09:52
+ * @LastEditTime: 2025-02-05 15:07:09
 -->
 # pcl
 ![](https://img.shields.io/badge/pcl-learning-v0.1-brightgreen)
@@ -30,7 +30,7 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 **代码对应系列笔记：[PCL(Point Cloud Library)学习记录（最新）](https://www.yuque.com/huangzhongqing/pcl)**
 
 
-<img src="https://github.com/HuangCongQing/pcl-learning/assets/20675770/f55c8b20-d7ec-43df-9f53-4271a0dcab12" alt="微信交流群二维码" width="50%;" height="50%" />
+<img src="assets/wechat_group(PCL).png" alt="微信交流群二维码" width="40%;" height="40%" />
 
 
 **相关项目实战:**
@@ -158,8 +158,8 @@ If you find this project useful in your research, please consider cite:
 
 可以领取优惠加入星球使劲向我提问哈~
 
-<img src="https://github.com/HuangCongQing/pcl-learning/assets/20675770/67965967-ee81-4e11-b05a-c82656d0d6d7" alt="" width="50%;" height="50%" />
-<img src="https://github.com/HuangCongQing/HuangCongQing/assets/20675770/304e0c4d-89d2-4cee-a2a9-3c690611c9d9" alt="" width="50%;" height="50%" />
+<img src="assets/2025优惠券.png" alt="" width="30%;" height="30%" />
+<img src="assets/知识星球.png" alt="" width="50%;" height="50%" />
 
 > PLus: 创建了一个知识星球 **【自动驾驶感知(PCL/ROS+DL)】** 专注于自动驾驶感知领域，包括传统方法(PCL点云库,ROS)和深度学习（目标检测+语义分割）方法。同时涉及Apollo，Autoware(基于ros2)，BEV感知，三维重建，SLAM(视觉+激光雷达) ，模型压缩（蒸馏+剪枝+量化等），自动驾驶模拟仿真，自动驾驶数据集标注&数据闭环等自动驾驶全栈技术，欢迎扫码二维码加入，一起登顶自动驾驶的高峰！
 
@@ -167,7 +167,7 @@ If you find this project useful in your research, please consider cite:
 
 微信公众号：**【双愚】**（huang_chongqing） 聊科研技术,谈人生思考,欢迎关注~
 
-<img src="https://user-images.githubusercontent.com/20675770/169835565-08fc9a49-573e-478a-84fc-d9b7c5fa27ff.png" alt="" width="50%;" height="50%" />
+<img src="assets/wechat.png" alt="" width="50%;" height="50%" />
 
 **往期推荐：**
 1. [本文不提供职业建议，却能助你一生](https://mp.weixin.qq.com/s/rBR62qoAEeT56gGYTA0law)
@@ -178,7 +178,7 @@ If you find this project useful in your research, please consider cite:
 
 **最后，如果您想要支持我的工作，请扫描下面的二维码**
 
-<img src="https://user-images.githubusercontent.com/20675770/174442478-705129f7-ca4d-4e89-9b21-7e1b84817940.png" alt="" width="50%;" height="50%" />
+<img src="assets/alipay.png" alt="" width="40%;" height="40%" />
 
 
 
