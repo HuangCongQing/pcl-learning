@@ -65,9 +65,11 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 
 * [00base](00base)
 
-##### step1
+##### step1（must）
 
-* [01common](01common )
+* [* 08 io 输入输出](08IO输入输出)  [[doc](https://www.yuque.com/huangzhongqing/pcl/mt2yo5)]
+* [* 09 filters 滤波](09filters滤波)  [[doc](https://www.yuque.com/huangzhongqing/pcl/ai96k5)]
+* [* 10 features 特征](10features特征)  [[doc](https://www.yuque.com/huangzhongqing/pcl/kf9kmf)]
 
 ##### step2
 
@@ -77,13 +79,8 @@ PCL（Point Cloud Library）点云库  **个人开发环境：Ubuntu18.04**
 * [05sample consensus  抽样一致性模块](05sampleconsensus抽样一致性模块)  [[doc](https://www.yuque.com/huangzhongqing/pcl/ivtxgx)]
 * [06range-images深度图像](06range-images深度图像)  [[doc](https://www.yuque.com/huangzhongqing/pcl/hxeyrz)]
 
-##### step3（must）
 
-* [* 08 io 输入输出](08IO输入输出)  [[doc](https://www.yuque.com/huangzhongqing/pcl/mt2yo5)]
-* [* 09 filters 滤波](09filters滤波)  [[doc](https://www.yuque.com/huangzhongqing/pcl/ai96k5)]
-* [* 10 features 特征](10features特征)  [[doc](https://www.yuque.com/huangzhongqing/pcl/kf9kmf)]
-
-##### step4（根据个人需要）
+##### step3（根据个人需要）
 
 * [11 surface表面 ](11surface表面)  [[doc](https://www.yuque.com/huangzhongqing/pcl/yfrd0w)]
 * [12 segmentation分割](12segmentation分割)  [[doc](https://www.yuque.com/huangzhongqing/pcl/kg7wvi)]
